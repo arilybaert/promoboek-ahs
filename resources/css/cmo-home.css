@@ -1,0 +1,24 @@
+.a-page-title {
+    text-align: center;
+}
+
+.o-cmo-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90vw;
+    margin: auto;
+}
+
+.o-card {
+    flex: 23% 0 0;
+}
+.a-cmo-image {
+    width: 100%;
+}
+.a-cmo-card-name {
+    text-align: center;
+}
+.a-cmo-tagline {
+    text-align: center;
+}

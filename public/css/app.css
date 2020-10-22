@@ -1,0 +1,106 @@
+.o-header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-site-title {
+    font-size: 54pt;
+    font-weight: bold;
+}
+
+/* navbar */
+.o-links {
+    display: flex;
+    justify-content: center;
+}
+.a-link {
+    padding: 1px 30px;
+    width: 160px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* home content */
+.o-home {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.o-home-card {
+    flex: 14% 0 0;
+    margin: 1rem;
+}
+.a-home-card-image {
+    width: 100%;
+    height: 130px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.a-home-card-title {
+    text-align: center;
+}
+.a-home-card-subtitle {
+    text-align: center;
+}
+.a-home-explination {
+    font-size: 14px;
+}
+.a-page-title {
+    text-align: center;
+}
+
+.o-cmo-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90vw;
+    margin: auto;
+}
+
+.o-card {
+    flex: 23% 0 0;
+}
+.a-cmo-image {
+    width: 100%;
+}
+.a-cmo-card-name {
+    text-align: center;
+}
+.a-cmo-tagline {
+    text-align: center;
+}
+.a-page-title {
+    text-align: center;
+}
+.o-yearbook-students {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 70vw;
+}
+.o-yearbook-students::after {
+    content: '';
+    flex: auto;
+}
+
+.o-studentcards {
+    flex: 10% 0 0;
+    padding: 0.5rem;
+}
+
+.a-yearbook-profilepicture {
+    width: 100%;
+}
+.a-yearbook-student-name {
+    text-align: center;
+}
+.a-yearbook-student-major {
+    text-align: center;
+}
+
+
