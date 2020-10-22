@@ -1,0 +1,50 @@
+.o-header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-site-title {
+    font-size: 54pt;
+    font-weight: bold;
+}
+
+/* navbar */
+.o-links {
+    display: flex;
+    justify-content: center;
+}
+.a-link {
+    padding: 1px 30px;
+    width: 160px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* home content */
+.o-home {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.o-home-card {
+    flex: 14% 0 0;
+    margin: 1rem;
+}
+.a-home-card-image {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+.a-home-card-title {
+    text-align: center;
+}
+.a-home-card-subtitle {
+    text-align: center;
+}
+.a-home-explination {
+    font-size: 14px;
+}
