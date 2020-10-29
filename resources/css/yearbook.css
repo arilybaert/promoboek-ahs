@@ -1,6 +1,10 @@
 .a-page-title {
     text-align: center;
 }
+.o-yearbook-filter {
+    display: flex;
+    justify-content: space-evenly;
+}
 .o-yearbook-students {
     display: flex;
     flex-wrap: wrap;

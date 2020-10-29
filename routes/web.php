@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@getIndex')->name('home');
 
 Route::get('/portfolio-cmo', 'PortfolioController@getCMO')->name('portfolio-cmo');
+// Route::get('/portfolio-cmo', [PortfolioController::class, 'getCMO'])->name('portfolio-cmo');
 Route::get('/portfolio-avd', 'PortfolioController@getAVD')->name('portfolio-avd');
 Route::get('/portfolio-nmd', 'PortfolioController@getNMD')->name('portfolio-nmd');
 Route::get('/portfolio-gmb', 'PortfolioController@getGMB')->name('portfolio-gmb');
 
 Route::get('/portfolio-cmo/rick', 'PortfolioController@getCMODetail')->name('portfolio-cmo-detail');
 
-Route::get('/yearbook', 'YearbookController@getIndex')->name('yearbook');
+Route::get('/yearbook/{id}', 'YearbookController@getIndex')->name('yearbook');
+// Route::get('/yearbook/{id}', 'YearbookController@getCMO')->name('yearbook-cmo');
 Route::get('/jobs', 'JobController@getIndex')->name('jobs');

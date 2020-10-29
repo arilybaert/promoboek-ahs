@@ -9,7 +9,7 @@ class PortfolioController extends Controller
 {
     public function getCMO()
     {
-        $students = Student::where('major_id', '1')->get();
+        $students = Student::where('course_id', '1')->get();
         return view('pages.cmo-home', [
         'students' => $students]);
     }
