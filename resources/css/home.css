@@ -1,14 +1,3 @@
-.o-header {
-    height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.a-site-title {
-    font-size: 54pt;
-    font-weight: bold;
-}
-
 /* navbar */
 .o-links {
     display: flex;
