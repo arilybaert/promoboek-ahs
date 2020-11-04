@@ -2,6 +2,13 @@
 
 @section('content')
 <h1 class="a-page-title">CMO Portfolios</h1>
+<div class="o-sub-courses">
+    @foreach ($sub_courses as $sub_course)
+        <a href="{{ url('portfolio-cmo/'. $sub_course->title_short .'/') }}">{{$sub_course->title}}</a>
+
+    @endforeach
+
+</div>
 <div class="o-cmo-portfolio">
 
     @foreach ( $students as $student)

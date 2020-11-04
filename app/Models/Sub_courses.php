@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Course;
 
-class Student extends Model
+class Sub_courses extends Model
 {
+
     use HasFactory;
 
     public function course()
@@ -15,4 +15,5 @@ class Student extends Model
     {
         return $this->belongsTo('App\Models\Course');
     }
+
 }

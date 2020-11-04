@@ -9,11 +9,12 @@ use App\Models\Course;
 
 class YearbookController extends Controller
 {
-    public function getIndex(Request $r, $id)
+    public function getIndex(Request $r, $id = null)
     {
         $courses = Course::all();
 
-        if(isset($id)) {
+        // filter students
+        if($id != null) {
             $course = Course::where('title_short', $id)->first();
             $students = Student::where('course_id', $course->id)->get();
             return view('pages.yearbook', [
@@ -21,6 +22,8 @@ class YearbookController extends Controller
                 'courses' => $courses,
 
             ]);
+
+        // show all students
         } else {
             $students = Student::all();
 
@@ -31,8 +34,5 @@ class YearbookController extends Controller
         }
 
     }
-    public function getCMO(Request $r, $id)
-    {
 
-    }
 }

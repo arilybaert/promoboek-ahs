@@ -25,6 +25,5 @@ Route::get('/portfolio-gmb', 'PortfolioController@getGMB')->name('portfolio-gmb'
 
 Route::get('/portfolio-cmo/rick', 'PortfolioController@getCMODetail')->name('portfolio-cmo-detail');
 
-Route::get('/yearbook/{id}', 'YearbookController@getIndex')->name('yearbook');
-// Route::get('/yearbook/{id}', 'YearbookController@getCMO')->name('yearbook-cmo');
+Route::get('/yearbook/{id?}', 'YearbookController@getIndex')->name('yearbook');
 Route::get('/jobs', 'JobController@getIndex')->name('jobs');

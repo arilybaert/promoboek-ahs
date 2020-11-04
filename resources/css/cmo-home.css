@@ -22,3 +22,8 @@
 .a-cmo-tagline {
     text-align: center;
 }
+.o-sub-courses {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}

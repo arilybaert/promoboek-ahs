@@ -3,15 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Sub_courses;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
     public function getCMO()
     {
+
+        $sub_courses = Sub_courses::where('course_id', 1)->get();
+
         $students = Student::where('course_id', '1')->get();
+
+
         return view('pages.cmo-home', [
-        'students' => $students]);
+            'sub_courses' => $sub_courses,
+            'students' => $students
+            ]);
     }
     public function getCMODetail()
     {
