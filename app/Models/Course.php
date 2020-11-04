@@ -12,5 +12,6 @@ class Course extends Model
     public function students()
     {
         return $this->hasMany('App\Models\Student');
+        return $this->hasMany('App\Models\Sub_courses');
     }
 }
