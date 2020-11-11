@@ -16,6 +16,7 @@ class HomeController extends Controller
         $courses = Course::all();
         return view('pages.home', [
             'courses' => $courses,
+            'sub_header' => '2020 - 2021'
         ]);
     }
 }
