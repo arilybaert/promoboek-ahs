@@ -11,5 +11,14 @@
 <body>
 
 <header class="o-header">
-    <h1 class="a-site-title">GDM</h1>
+    <div class="m-headerTop">
+        <a href="{{ route('yearbook')}}" class="a-link">Yearbook</a>
+        <img src="/src/img/logo/promoboek-ahs.png" alt="GDM" title="GDM" class="a-site-logo">
+        <a href="{{ route('jobs')}}" class="a-link">Jobs</a>
+    </div>
+    <div class="m-headerBottom">
+        <span class=" a-line a-lineLeft"></span>
+        <span class="a-subHeader">2020 - 2021</span>
+        <span class="a-line a-lineRight"></span>
+    </div>
 </header>

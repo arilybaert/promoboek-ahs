@@ -1,10 +1,6 @@
 @extends('layout')
 
 @section('content')
-<div class="o-links">
-    <a href="{{ route('yearbook')}}" class="a-link">Yearbook</a>
-    <a href="{{ route('jobs')}}" class="a-link">Jobs</a>
-</div>
 <div class="o-home">
     @foreach ( $courses as $course )
         <a class="o-home-card" href="{{ route('portfolio-cmo')}}">

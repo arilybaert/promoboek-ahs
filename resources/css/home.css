@@ -1,22 +1,11 @@
 /* navbar */
-.o-links {
-    display: flex;
-    justify-content: center;
-}
-.a-link {
-    padding: 1px 30px;
-    width: 160px;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
-    margin: 1rem;
-}
+
 
 /* home content */
 .o-home {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .o-home-card {
