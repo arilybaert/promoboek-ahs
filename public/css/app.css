@@ -172,7 +172,6 @@ a.o-home-card:visited {
 }
 
 .m-headerTop {
-    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,6 +184,13 @@ a.o-home-card:visited {
     font-size: 20pt;
     font-weight: bold;
     color: var(--color-accent);
+    margin-top: 35px;
+
+}
+.m-site-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .a-site-logo {
@@ -196,6 +202,7 @@ a.o-home-card:visited {
 .a-subHeader {
     line-height: 0.75;
     padding: 0 16px;
+    text-align: center;
 }
 
 /* Sub header LINE styling */
@@ -203,7 +210,7 @@ a.o-home-card:visited {
 .a-line {
     background-color: var(--color-accent);
     height: 4px;
-    width: 25vw;
+    width: 27vw;
     align-self: flex-end;
 }
 
@@ -249,6 +256,7 @@ a.a-link:hover {
 
 
 .o-footer {
+    margin-top: 2rem;
     width: 100vw;
     height: 20vh;
     align-items: center;
