@@ -1,11 +1,9 @@
 @extends('layout')
 
 @section('content')
-<h1 class="a-page-title">CMO Portfolios</h1>
-<div class="o-sub-courses">
+<div class="o-sub-courses row">
     @foreach ($sub_courses as $sub_course)
-        <a href="{{ url('portfolio-cmo/'. $sub_course->title_short .'/') }}">{{$sub_course->title}}</a>
-
+        <a href="{{ url('portfolio-cmo/'. $sub_course->title_short .'/') }}" class="col-3">{{$sub_course->title}}</a>
     @endforeach
 
 </div>

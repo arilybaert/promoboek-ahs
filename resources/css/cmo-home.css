@@ -23,7 +23,8 @@
     text-align: center;
 }
 .o-sub-courses {
-    width: 100%;
+    width: 100vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }

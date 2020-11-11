@@ -8,6 +8,7 @@
 .m-headerTop {
     display: flex;
     justify-content: center;
+    width: 100%;
     align-items: center;
     margin-top: 10vh;
 }
