@@ -15,16 +15,16 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
             $table->string('bio');
             $table->string('catchphrase');
-            $table->integer('thumbnail');
-            $table->integer('picture');
+            $table->string('thumbnail');
+            $table->string('picture');
             $table->foreignId('course_id')->references('id')->on('courses');
-            $table->foreignId('sub_course_id')->references('id')->on('sub_courses');
+            $table->foreignId('sub_course_id')->references('id')->on('sub_courses')->nullable();
+            $table->timestamps();
         });
     }
 
