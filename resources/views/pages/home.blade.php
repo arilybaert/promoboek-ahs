@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-<div class="container-md">
+<div class="container-xs container-sm container-md">
     <div class="o-home row">
         @foreach ( $courses as $course )
             <a class="o-home-card col-12 col-sm-6 col-md-3" href="{{ route('portfolio-cmo')}}">

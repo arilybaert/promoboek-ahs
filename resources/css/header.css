@@ -6,7 +6,6 @@
 }
 
 .m-headerTop {
-    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +18,13 @@
     font-size: 20pt;
     font-weight: bold;
     color: var(--color-accent);
+    margin-top: 35px;
+
+}
+.m-site-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .a-site-logo {
@@ -30,6 +36,7 @@
 .a-subHeader {
     line-height: 0.75;
     padding: 0 16px;
+    text-align: center;
 }
 
 /* Sub header LINE styling */
@@ -37,7 +44,7 @@
 .a-line {
     background-color: var(--color-accent);
     height: 4px;
-    width: 25vw;
+    width: 27vw;
     align-self: flex-end;
 }
 
