@@ -10,3 +10,18 @@
     --color-white: #fafaf5;
     --color-black: #00000F;
 }
+
+/* Background colors  */
+
+.a-bg-color-cmo {
+    background-color: var(--color-cmo);
+}
+.a-bg-color-nmd {
+    background-color: var(--color-nmd);
+}
+.a-bg-color-avd {
+    background-color: var(--color-avd);
+}
+.a-bg-color-gmb {
+    background-color: var(--color-gmb);
+}

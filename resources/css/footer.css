@@ -1,0 +1,12 @@
+.o-footer {
+    width: 100vw;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-main);
+}
+.a-footer-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
