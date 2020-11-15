@@ -19,7 +19,8 @@ class PortfolioController extends Controller
         return view('pages.cmo-home', [
             'sub_courses' => $sub_courses,
             'students' => $students,
-            'sub_header' => 'Crossmedia'
+            'sub_header' => 'Crossmedia',
+            'col_size' => 1
             ]);
     }
     public function getCMODetail()

@@ -1,17 +1,57 @@
-.a-page-title {
+/* sub course filter */
+.o-sub-courses {
+    margin-top: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.a-sub-course-title {
+    background-color: var(--color-main);
+    color: var(--color-white);
     text-align: center;
+    border-radius: 18px;
+    padding:  1px 0;
+    font-weight: bold;
 }
 
+a.a-sub-course-title:link,
+a.a-sub-course-title:visited {
+    color: var(--color-white);
+    text-decoration: none;
+    border: 4px solid var(--color-main);
+
+}
+
+a.a-sub-course-title:hover {
+    border: 4px solid var(--color-main);
+    color: var(--color-main);
+    background-color: var(--color-white);
+
+}
 .o-cmo-portfolio {
+    width: 80%;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90vw;
-    margin: auto;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+
 }
 
+
+
 .o-card {
-    flex: 23% 0 0;
+    /* flex: 23% 0 0; */
+}
+.o-card-left {
+    display: block;
+    width: 38%;
+}
+.o-card-right {
+    display: block;
+    width: 28%;
 }
 .a-cmo-image {
     width: 100%;
@@ -22,9 +62,4 @@
 .a-cmo-tagline {
     text-align: center;
 }
-.o-sub-courses {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
