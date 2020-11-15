@@ -14,19 +14,19 @@
 
     <div class="m-headerTop row">
         @if (\Route::current()->getName() == 'home')
-            <a href="{{ route('yearbook')}}" class="a-link order-2 order-md-1 col-sm-3 col-md-2">Yearbook</a>
-            <a href="{{ route('jobs')}}" class="a-link order-3 order-md-3 col-sm-3  col-md-2">Jobs</a>
+            <a href="{{ route('yearbook')}}" class="a-link order-2 order-md-1 col-sm-3 col-md-3">Yearbook</a>
+            <a href="{{ route('jobs')}}" class="a-link order-3  offset-sm-1 offset-md-0 order-md-3 col-sm-3  col-md-3">Jobs</a>
         @endif
 
-        <div class="order-1 order-md-2 col-sm-12 col-md-5 m-site-logo">
+        <div class="order-1 order-md-2 col-sm-12 col-md-6 m-site-logo">
             <img src="/src/img/logo/promoboek-ahs.png" alt="GDM" title="GDM" class="a-site-logo ">
         </div>
     </div>
 
-    {{-- <div class="m-headerBottom row">
-        <span class=" a-line a-lineLeft col-4"></span>
-        <span class="a-subHeader col-4">{{$sub_header}}</span>
-        <span class="a-line a-lineRight col-4"></span>
-    </div> --}}
+    <div class="m-headerBottom row">
+        <span class=" a-line a-lineLeft col-2 col-sm-3 col-md-4"></span>
+        <span class="a-subHeader col-8 col-sm-6 col-md-4">{{$sub_header}}</span>
+        <span class="a-line a-lineRight col-2 col-sm-3 col-md-4"></span>
+    </div>
 
 </header>

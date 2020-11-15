@@ -2,6 +2,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.container {
+    width: 85% !important;
+}
 @import "variables.css";
 @import "home.css";
 @import "cmo-home.css";
