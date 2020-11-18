@@ -9,19 +9,28 @@
 
     </div>
 </div>
-<div class="o-cmo-portfolio ">
+<div class="o-cmo-portfolio o-cmo-container">
 
         @foreach ( $students as $student)
 
-            <?php $col_size = $col_size+1 ?>
+            <?php $col_size = $col_size+1; ?>
+            <?php
 
-            <a href="/portfolio-cmo/rick" class="{{$col_size%2 ? 'o-card-right ' : 'o-card-left' }} o-card">
+            // check thumbnail aspect ratio to give according style class
+
+            $image_size_array = getimagesize($student->thumbnail);
+
+            $image_width = $image_size_array[0];
+            $image_height = $image_size_array[1];
+            $image_aspect_ratio = ($image_size_array[0] / $image_size_array[1]);
+?>
+
+{{-- href="/portfolio-cmo/rick" --}}
+            <span  class="{{ $image_aspect_ratio >= 1 ? 'm-landscape' : 'm-portait' }}    m-cmo-img">
                 <img src="{{ $student->thumbnail}}" alt="" class="a-cmo-image">
-                {{-- <h2 class="a-cmo-card-name">{{ $student->first_name . ' ' . $student->last_name }}</h2>
-                <p class="a-cmo-tagline">{{ $student->catchphrase}}</p>
-                <p class="a-cmo-tagline">{{ $student->course->title}}</p> --}}
 
-            </a>
+            </span>
+
 
         @endforeach
 
