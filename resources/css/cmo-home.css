@@ -32,29 +32,50 @@ a.a-sub-course-title:hover {
     max-width: 850px;
     margin: 0 auto;
     margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    /* grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); */
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 1rem;
+    grid-auto-rows: 200px;
+
+
 
 }
 
+.box {
+ position: relative;
+}
+.aa {
+    position: absolute;
+    top: 3;
+    left: 4;
+}
+
+.m-portait {
+    grid-row-end: span 3;
+}
+.m-landscape {
+    grid-row-end: span 1;
+
+}
+
+/* Randomize gride size */
+
+/* .m-cmo-img:nth-child(odd) {
+    grid-row-end: span 3;
+
+}
+.m-cmo-img:nth-child(even) {
+    grid-row-end: span 1;
+
+} */
 
 
-.o-card {
-    /* flex: 23% 0 0; */
-}
-.o-card-left {
-    display: block;
-    width: 38%;
-}
-.o-card-right {
-    display: block;
-    width: 28%;
-}
 .a-cmo-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .a-cmo-card-name {
     text-align: center;
