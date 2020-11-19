@@ -4,12 +4,13 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
 .a-sub-course-title {
     background-color: var(--color-main);
     color: var(--color-white);
     text-align: center;
     border-radius: 18px;
-    padding:  1px 0;
+    padding: 1px 0;
     font-weight: bold;
 }
 
@@ -27,6 +28,7 @@ a.a-sub-course-title:hover {
     background-color: var(--color-white);
 
 }
+
 .o-cmo-portfolio {
     width: 80%;
     max-width: 850px;
@@ -44,8 +46,9 @@ a.a-sub-course-title:hover {
 }
 
 .box {
- position: relative;
+    position: relative;
 }
+
 .aa {
     position: absolute;
     top: 3;
@@ -55,6 +58,7 @@ a.a-sub-course-title:hover {
 .m-portait {
     grid-row-end: span 3;
 }
+
 .m-landscape {
     grid-row-end: span 1;
 
@@ -77,10 +81,64 @@ a.a-sub-course-title:hover {
     height: 100%;
     object-fit: cover;
 }
+
 .a-cmo-card-name {
     text-align: center;
 }
+
 .a-cmo-tagline {
     text-align: center;
 }
 
+
+/* modal */
+.a-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(243,129,129);
+    background: linear-gradient(145deg, rgba(243,129,129,0.65) 0%, rgba(252,226,138,0.65) 115%);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+
+}
+
+.o-modal-content {
+
+    align-self: center;
+    background-color: var(--color-white);
+    padding: 1rem;
+    /* width: 24rem; */
+    border-radius: 0.5rem;
+    width: 80%;
+}
+.a-cmo-modal-image {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.close {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.35rem;
+    background-color: lightgray;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible !important;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
