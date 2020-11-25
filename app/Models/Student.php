@@ -14,5 +14,7 @@ class Student extends Model
 
     {
         return $this->belongsTo('App\Models\Course');
+        return $this->hasMany('App\Models\Image');
+
     }
 }

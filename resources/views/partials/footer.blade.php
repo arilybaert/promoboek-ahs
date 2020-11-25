@@ -29,5 +29,6 @@ for (let [index, trigger] of triggerArray) {
 }
 
 </script>
+
 </body>
 </html>

@@ -20,6 +20,7 @@ class CreateImagesTable extends Migration
             $table->string('tags');
             $table->string('type');
             $table->string('url');
+            $table->boolean('thumbnail');
             $table->foreignId('student_id')->references('id')->on('students');
             $table->timestamps();
 
