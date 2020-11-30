@@ -4,7 +4,10 @@
     height: 20vh;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-main);
+    /* background-color: var(--color-main); */
+
+    background: var(--background-main);
+    background: linear-gradient(145deg, var(--color-gradient-one) 0%, var(--color-gradient-two) 115%);
 }
 .a-footer-img {
     display: flex;

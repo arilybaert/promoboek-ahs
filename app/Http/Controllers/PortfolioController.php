@@ -14,6 +14,8 @@ class PortfolioController extends Controller
 
         $sub_courses = Sub_courses::where('course_id', 1)->get();
 
+        // Show thumbail picture for each student
+
         $students = Student::where('course_id', '1')
         ->join('images', function ($join) {
             $join->on('students.id', '=', 'images.student_id')
@@ -21,7 +23,6 @@ class PortfolioController extends Controller
         })
         ->get();
 
-        // var_dump($students);
         // echo '<pre>' . var_export($students, true) . '</pre>';
 
 
@@ -31,19 +32,32 @@ class PortfolioController extends Controller
             'sub_header' => 'Crossmedia',
             ]);
     }
-    public function getCMODetail()
+
+    public function getCMODetail(Student $student)
     {
 
-        return view('pages.cmo-detail');
+
+        $images = Image::where('student_id', $student->id)->get();
+
+        // echo '<pre>' . var_export($images, true) . '</pre>';
+
+        return view('pages.cmo-detail', [
+            'sub_header' => $student->first_name . ' <br> ' . $student->last_name,
+            'images' => $images,
+            'student' => $student
+        ]);
     }
+
     public function getAVD()
     {
 
     }
+
     public function getNMD()
     {
 
     }
+
     public function getGMB()
     {
 

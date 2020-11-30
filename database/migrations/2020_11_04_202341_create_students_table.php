@@ -21,7 +21,7 @@ class CreateStudentsTable extends Migration
             $table->string('bio');
             $table->string('catchphrase');
             $table->string('thumbnail');
-            $table->string('picture');
+            $table->string('profile');
             $table->foreignId('course_id')->references('id')->on('courses');
             $table->foreignId('sub_course_id')->references('id')->on('sub_courses')->nullable();
             $table->timestamps();

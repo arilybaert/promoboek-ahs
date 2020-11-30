@@ -2,6 +2,15 @@
     --color-main: #4D4F9C;
     --color-accent: #C4314B;
 
+
+    --color-gradient-one: rgb(243, 129, 129);
+    --color-gradient-one-trans:  rgba(243,129,129,0.65);
+
+    --color-gradient-two: rgb(252, 225, 138);
+    --color-gradient-two-trans: rgba(252,226,138,0.65);
+
+    --background-main: rgb(243,129,129);
+
     --color-cmo: #44B732;
     --color-nmd: #E02C31;
     --color-avd: #FFC400;

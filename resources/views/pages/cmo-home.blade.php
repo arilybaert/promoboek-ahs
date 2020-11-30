@@ -57,7 +57,7 @@
 
                             <div class="col-2 m-cmo-portfolioBtn">
                                 <i class="fas fa-times close"></i>
-                                <a class="a-cmo-portfolioBtn" href="{{route('portfolio-cmo-detail', $student->id)}}'">
+                                <a class="a-cmo-portfolioBtn" href="{{route('portfolio-cmo-detail', $student->id)}}">
                                     <span>portfolio</span>
                                 </a>
                             </div>
