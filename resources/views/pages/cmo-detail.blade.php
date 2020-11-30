@@ -1,31 +1,34 @@
 @extends('layout')
 
 @section('content')
-<h1 class="a-page-title">Rick Sanches</h1>
-<div class="o-cmo-detail">
-    <div class="o-thum-ing-cont">
-        <img src="https://i0.wp.com/www.geek-art.net/wp-content/uploads/2017/01/Dan-Mumford-Im-starting-to-work-up-some-anxiety-about-this-whole-thing.jpg?fit=772%2C1024&ssl=1" alt="" class="a-thumb-img">
+<div class="container">
+    <div class="cmo-detail-header">
+        <p>{{$student->catchphrase}}</p>
+    <img src="/{{$student->profile}}" alt="profile-picture" class="a-cmo-detail-profile">
+
     </div>
-    <div class="o-cmo-student-detail">
-        <table>
-            <tr>
-                <th>name</th>
-                <td>Rick Sanchez</td>
-            </tr>
-            <tr>
-                <th>major</th>
-                <td>Cross Media Ontwerp</td>
-            </tr>
-            <tr>
-                <th>tag</th>
-                <td>A student of the game</td>
-            </tr>
-            <tr>
-                <th>bio</th>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus doloribus nesciunt pariatur! Quod asperiores impedit dolore, laboriosam dignissimos nam quia repellendus soluta adipisci ad veniam nisi sit numquam, aperiam perferendis!</td>
-            </tr>
-        </table>
+    <div class="o-cmo-detail-main">
+
+        @foreach ($images as $image)
+        <?php
+        // check thumbnail aspect ratio to give according style class
+        // echo '<pre>' . var_export($student->url, true) . '</pre>';
+
+
+        $image_size_array = getimagesize($image->url);
+
+        $image_width = $image_size_array[0];
+        $image_height = $image_size_array[1];
+        $image_aspect_ratio = ($image_size_array[0] / $image_size_array[1]);
+    ?>
+        <span  class="{{ $image_aspect_ratio >= 1 ? 'm-landscape' : 'm-portait' }}">
+            <img src="/{{ $image->url}}" alt="" class="a-cmo-detail-img">
+
+        </span>
+        @endforeach
     </div>
+
 </div>
+
 
 @endsection

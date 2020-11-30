@@ -9,6 +9,7 @@ body {
 @import "variables.css";
 @import "home.css";
 @import "cmo-home.css";
+@import "cmo-detail.css";
 @import "yearbook.css";
 @import "header.css";
 @import "footer.css";

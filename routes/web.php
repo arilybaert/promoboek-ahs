@@ -23,7 +23,7 @@ Route::get('/portfolio-avd', 'PortfolioController@getAVD')->name('portfolio-avd'
 Route::get('/portfolio-nmd', 'PortfolioController@getNMD')->name('portfolio-nmd');
 Route::get('/portfolio-gmb', 'PortfolioController@getGMB')->name('portfolio-gmb');
 
-Route::get('/portfolio-cmo/{id}', 'PortfolioController@getCMODetail')->name('portfolio-cmo-detail');
+Route::get('/portfolio-cmo/{student}', 'PortfolioController@getCMODetail')->name('portfolio-cmo-detail');
 
 Route::get('/yearbook/{id?}', 'YearbookController@getIndex')->name('yearbook');
 Route::get('/jobs', 'JobController@getIndex')->name('jobs');
