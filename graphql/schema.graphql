@@ -1,0 +1,75 @@
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+type Query {
+    users: [User!]! @paginate(defaultCount: 10)
+    students: [Student!]! @paginate(defaultCount: 10)
+    courses: [Course!]! @paginate(defaultCount: 10)
+    sub_courses: [Sub_course!]! @paginate(defaultCount: 10)
+    images: [Image!]! @paginate(defaultCount: 10)
+
+    user(id: ID @eq): User @find
+    student(id: ID @eq): Student @find
+    course(id: ID @eq): Course @find
+    sub_course(id: ID @eq): Sub_course @find
+    image(id: ID @eq): Image @find
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Student {
+    id: ID!
+    first_name: String!
+    last_name: String!
+    email: String!
+    bio: String!
+    catchphrase: String!
+    thumbnail: String!
+    profile: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+    image: Image @hasMany
+    course: Course @belongsTo
+    sub_course: Sub_course @belongsTo
+}
+
+type Course {
+    id: ID!
+    title: String!
+    title_short: String!
+    content: String!
+    img_url: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Sub_course {
+    id: ID!
+    title: String!
+    title_short: String!
+    course: Course @belongsTo
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Image {
+    id: ID!
+    title: String!
+    content: String!
+    tags: String!
+    type: String!
+    url: String!
+    thumbnail: String!
+    student: Student @belongsTo
+    created_at: DateTime!
+    updated_at: DateTime!
+}
