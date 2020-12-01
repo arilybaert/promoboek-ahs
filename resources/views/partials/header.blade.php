@@ -20,7 +20,7 @@
         @endif
 
         <div class="order-1 order-md-2 col-sm-12 col-md-6 m-site-logo">
-            <img src="/src/img/logo/promoboek-ahs.png" alt="GDM" title="GDM" class="a-site-logo ">
+            <img src="{{asset('/src/img/logo/promoboek-ahs-2.png') }}" alt="GDM" title="GDM" class="a-site-logo ">
         </div>
     </div>
 

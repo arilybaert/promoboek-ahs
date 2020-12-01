@@ -17,13 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@getIndex')->name('home');
 
-Route::get('/portfolio-cmo', 'PortfolioController@getCMO')->name('portfolio-cmo');
-// Route::get('/portfolio-cmo', [PortfolioController::class, 'getCMO'])->name('portfolio-cmo');
-Route::get('/portfolio-avd', 'PortfolioController@getAVD')->name('portfolio-avd');
-Route::get('/portfolio-nmd', 'PortfolioController@getNMD')->name('portfolio-nmd');
-Route::get('/portfolio-gmb', 'PortfolioController@getGMB')->name('portfolio-gmb');
+Route::get('/portfolio-cmo', [PortfolioController::class, 'getCMO'])->name('portfolio-cmo');
+Route::get('/portfolio-cmo/graphic-design', [PortfolioController::class, 'getCMOGD'])->name('portfolio-cmo-gd');
+Route::get('/portfolio-cmo/photo-design', [PortfolioController::class, 'getCMOPD'])->name('portfolio-cmo-pd');
+Route::get('/portfolio-avd', [PortfolioController::class, 'getAVD'])->name('portfolio-avd');
+Route::get('/portfolio-nmd', [PortfolioController::class, 'getNMD'])->name('portfolio-nmd');
+Route::get('/portfolio-gmb', [PortfolioController::class, 'getGMB'])->name('portfolio-gmb');
 
-Route::get('/portfolio-cmo/{student}', 'PortfolioController@getCMODetail')->name('portfolio-cmo-detail');
+Route::get('/portfolio-cmo/{student}', [PortfolioController::class, 'getCMODetail'])->name('portfolio-cmo-detail');
 
-Route::get('/yearbook/{id?}', 'YearbookController@getIndex')->name('yearbook');
-Route::get('/jobs', 'JobController@getIndex')->name('jobs');
+Route::get('/yearbook/{id?}', [YearbookController::class , 'getIndex'])->name('yearbook');
+Route::get('/jobs', [JobController::class, 'getIndex'])->name('jobs');

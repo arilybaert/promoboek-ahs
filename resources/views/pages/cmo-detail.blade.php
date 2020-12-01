@@ -22,7 +22,7 @@
         $image_aspect_ratio = ($image_size_array[0] / $image_size_array[1]);
     ?>
         <span  class="{{ $image_aspect_ratio >= 1 ? 'm-landscape' : 'm-portait' }}">
-            <img src="/{{ $image->url}}" alt="" class="a-cmo-detail-img">
+            <img src="{{ asset($image->url) }}" alt="" class="a-cmo-detail-img">
 
         </span>
         @endforeach
