@@ -3,9 +3,12 @@
 @section('content')
 <div class="container">
     <div class="o-sub-courses row">
-        @foreach ($sub_courses as $sub_course)
+        {{-- @foreach ($sub_courses as $sub_course)
             <a href="{{ url('portfolio-cmo/'. $sub_course->title_short .'/') }}" class="col-5 col-md-3 a-sub-course-title">{{$sub_course->title}}</a>
-        @endforeach
+        @endforeach --}}
+        <a href="{{ route('portfolio-cmo-gd') }}" class="col-5 col-md-3 a-sub-course-title">Graphic Design</a>
+        <a href="{{ route('portfolio-cmo-pd') }}" class="col-5 col-md-3 a-sub-course-title">Photo Design</a>
+
 
     </div>
 </div>
@@ -28,7 +31,7 @@
             <span class="
                 {{ $image_aspect_ratio >= 1 ? 'm-landscape' : 'm-portait' }} m-cmo-img trigger">
 
-                <img src="{{ $student->url }}" alt="" class="a-cmo-image">
+                <img src="{{ asset($student->url) }}" alt="" class="a-cmo-image">
             </span>
 
             <!-- The Modal -->
@@ -42,7 +45,7 @@
                             <div class="col-10">
                                 <div class="row">
                                     <div class="col-12 col-md-5">
-                                        <img src="{{ $student->url }}" alt="" class="a-cmo-modal-image">
+                                        <img src="{{ asset($student->url) }}" alt="" class="a-cmo-modal-image">
                                     </div>
                                     <div class="o-student-portofolio-info col-12 col-md-5">
                                         <h2>Titel werk</h2>
