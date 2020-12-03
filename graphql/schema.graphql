@@ -5,10 +5,10 @@ scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
 
 type Query {
-    users: [User!]! @paginate(defaultCount: 10)
-    students: [Student!]! @paginate(defaultCount: 10)
-    courses: [Course!]! @paginate(defaultCount: 10)
-    sub_courses: [Sub_course!]! @paginate(defaultCount: 10)
+    users: [User!]! @paginate(defaultCount: 100)
+    students: [Student!]! @paginate(defaultCount: 100)
+    courses: [Course!]! @paginate(defaultCount: 100)
+    sub_courses: [Sub_course!]! @paginate(defaultCount: 100)
     images: [Image!]! @paginate(defaultCount: 10)
 
     user(id: ID @eq): User @find
@@ -33,7 +33,6 @@ type Student {
     email: String!
     bio: String!
     catchphrase: String!
-    thumbnail: String!
     profile: String!
     created_at: DateTime!
     updated_at: DateTime!
