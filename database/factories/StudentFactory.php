@@ -26,7 +26,7 @@ class StudentFactory extends Factory
             'last_name' => $this->faker->lastName,
             'email' => $this->faker->firstName . $this->faker->lastName . '@student.arteveldehs.be',
             'bio' => $this->faker->paragraph($nbSentences = 3, $variableNbSentences = true),
-            'catchPhrase' => $this->faker->catchPhrase,
+            'catchphrase' => $this->faker->catchPhrase,
             'profile' => 'src/img/profile/face-' . $this->faker->numberBetween($min = 1, $max = 15) . '.jpg',
 
         ];
