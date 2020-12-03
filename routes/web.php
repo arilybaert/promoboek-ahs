@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\YearbookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@getIndex')->name('home');
+Route::get('/', [HomeController::class, 'getIndex'])->name('home');
 
 Route::get('/portfolio-cmo', [PortfolioController::class, 'getCMO'])->name('portfolio-cmo');
 Route::get('/portfolio-cmo/graphic-design', [PortfolioController::class, 'getCMOGD'])->name('portfolio-cmo-gd');

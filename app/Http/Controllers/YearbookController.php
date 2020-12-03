@@ -20,7 +20,7 @@ class YearbookController extends Controller
             return view('pages.yearbook', [
                 'students' => $students,
                 'courses' => $courses,
-
+                'sub_header' => 'Yearbook'
             ]);
 
         // show all students
@@ -30,6 +30,8 @@ class YearbookController extends Controller
             return view('pages.yearbook', [
                 'students' => $students,
                 'courses' => $courses,
+                'sub_header' => 'Yearbook'
+
             ]);
         }
 

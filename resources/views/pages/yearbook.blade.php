@@ -14,7 +14,7 @@
 
         @foreach ($students as $student)
             <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-                <img class="a-yearbook-profilepicture" src="{{ $student->picture}}" alt="">
+                <img class="a-yearbook-profilepicture" src="{{ asset($student->profile)}}" alt="">
                 <h2 class="a-yearbook-student-name">{{ $student->first_name . ' ' . $student->last_name }}</h2>
                 <p class="a-yearbook-student-major">{{ $student->course->title}}</p>
             </div>
