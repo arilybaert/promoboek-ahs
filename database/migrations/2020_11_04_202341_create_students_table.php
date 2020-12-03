@@ -18,12 +18,11 @@ class CreateStudentsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
-            $table->string('bio');
+            $table->string('bio', 1000);
             $table->string('catchphrase');
-            $table->string('thumbnail');
             $table->string('profile');
             $table->foreignId('course_id')->references('id')->on('courses');
-            $table->foreignId('sub_course_id')->references('id')->on('sub_courses')->nullable();
+            $table->foreignId('sub_course_id')->nullable()->references('id')->on('sub_courses')->nullable();
             $table->timestamps();
         });
     }
