@@ -16,9 +16,8 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('content');
+            $table->string('content', 1500);
             $table->string('tags');
-            $table->string('type');
             $table->string('url');
             $table->boolean('thumbnail');
             $table->foreignId('student_id')->references('id')->on('students');
