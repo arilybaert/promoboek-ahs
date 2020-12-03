@@ -19,6 +19,8 @@
     --color-white: #fafaf5;
     --color-black: #00000F;
 
+    --color-border: #FCE28A;
+    --color-portfolio-home-text: #F38181;
     --box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.57);
 }
 
@@ -114,10 +116,7 @@ a.o-home-card:visited {
 .o-home-card:hover img{
     transform: scale(1.04); /* zoom image on hover */
 }
-.o-home-card:hover p{
-    font-weight: 370;
-    /* color: var(--color-accent); */
-}
+
 .o-home-card:hover h3{
     /* color: var(--color-main); */
     border-bottom: 1px solid var(--color-accent);
@@ -304,7 +303,51 @@ i.fa-times {
     .o-cmo-portfolio {
     grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
 }
-  }
+}
+.o-nmd-portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+
+}
+.o-nmd-card {
+    display: flex;
+    flex-direction: column;
+
+}
+.o-nmd-card:hover img{
+    transform: scale(1.02);
+}
+.a-nmd-image {
+
+    width: 100%;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid var(--color-border);
+}
+.a-nmd-tags {
+    color: var(--color-accent);
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.a-nmd-home-content {
+    color: var(--color-portfolio-home-text);
+}
+
+
+/* responsive grid */
+@media only screen and (max-width: 800px) {
+    .o-nmd-portfolio {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+}
+}
 .cmo-detail-header {
     display: flex;
     flex-direction: column;

@@ -175,4 +175,4 @@ i.fa-times {
     .o-cmo-portfolio {
     grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
 }
-  }
+}

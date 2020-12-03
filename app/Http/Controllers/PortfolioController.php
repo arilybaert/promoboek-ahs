@@ -87,6 +87,18 @@ class PortfolioController extends Controller
 
     public function getNMD()
     {
+        // Show thumbail picture for each student
+
+        $students = Student::where('course_id', '3')
+        ->join('images', function ($join) {
+            $join->on('students.id', '=', 'images.student_id')
+                 ->where('images.thumbnail', '=', 1);
+        })->get();
+
+        return view('pages.nmd-home', [
+            'students' => $students,
+            'sub_header' => 'New Media Development',
+            ]);
 
     }
 
