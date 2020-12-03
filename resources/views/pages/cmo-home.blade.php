@@ -21,7 +21,7 @@
                 // echo '<pre>' . var_export($student->url, true) . '</pre>';
 
 
-                $image_size_array = getimagesize($student->url);
+                $image_size_array = getimagesize(asset($student->url));
 
                 $image_width = $image_size_array[0];
                 $image_height = $image_size_array[1];

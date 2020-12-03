@@ -28,7 +28,7 @@ class StudentFactory extends Factory
             'bio' => $this->faker->paragraph($nbSentences = 3, $variableNbSentences = true),
             'catchPhrase' => $this->faker->catchPhrase,
             'thumbnail' => 'src/img/portfolio/cmo/cm-' . $this->faker->numberBetween($min = 1, $max = 9) . '.jpg',
-            'profile' => 'src/img/profile/face-' . $this->faker->numberBetween($min = 1, $max = 25) . '.jpg',
+            'profile' => 'src/img/profile/face-' . $this->faker->numberBetween($min = 1, $max = 15) . '.jpg',
             'course_id' => '1',
             'course_id' => $this->faker->numberBetween($min = 1, $max = 2),
         ];
