@@ -18,7 +18,7 @@
 
             <?php
                 // check thumbnail aspect ratio to give according style class
-                // echo '<pre>' . var_export($student->url, true) . '</pre>';
+                echo '<pre>' . var_export($student->title, true) . '</pre>';
 
 
                 $image_size_array = getimagesize(asset($student->url));
