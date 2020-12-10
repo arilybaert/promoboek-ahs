@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <!-- Test comment Jesse Vandermeerch -->
     <div class="o-sub-courses row">
         {{-- @foreach ($sub_courses as $sub_course)
             <a href="{{ url('portfolio-cmo/'. $sub_course->title_short .'/') }}" class="col-5 col-md-3 a-sub-course-title">{{$sub_course->title}}</a>
