@@ -49,11 +49,10 @@
                                         <img src="{{ asset($student->url) }}" alt="" class="a-cmo-modal-image">
                                     </div>
                                     <div class="o-student-portofolio-info col-12 col-md-5">
-                                        <h2>Titel werk</h2>
+                                        <h2>{{$student->title}}</h2>
                                         <h3>{{$student->first_name . " " . $student->last_name}}</h3>
                                         <p class="a-cmo-portfolio-description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu
-
+                                            {{$student->content}}
                                         </p>
                                     </div>
                                 </div>
