@@ -11,11 +11,11 @@
         @foreach ( $students as $student)
 
 
-            <div class="o-nmd-card">
+            <a class="o-nmd-card"  href="{{route('portfolio-nmd-detail', $student->id)}}">
                 <img src="{{ asset($student->url) }}" alt="" class="a-nmd-image">
                 <h3 class="a-nmd-tags">{{ $student->tags}} </h3>
                 <p class="a-nmd-home-content">{{ $student->content}} </p>
-            </div>
+            </a>
 
             <!-- The Modal -->
             {{-- <div class="a-modal">
