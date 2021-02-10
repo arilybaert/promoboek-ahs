@@ -3,9 +3,19 @@
 @section('content')
 <div class="container">
     <div class="cmo-detail-header">
-        <p>{{$student->catchphrase}}</p>
-    <img src="/{{$student->profile}}" alt="profile-picture" class="a-cmo-detail-profile">
 
+        {{-- catchphrase --}}
+        <p class="a-cmo-detail-catchprase">{{$student->catchphrase}}</p>
+
+        {{-- profilepicture --}}
+
+        <div class="m-cmo-detail-container">
+            <img src="/{{$student->profile}}" alt="profile-picture" class="a-cmo-detail-profile">
+            <p class="a-cmo-detail-profile-tag">{{strtoupper($student->course->title_short)}}</p>
+        </div>
+
+        {{-- bio --}}
+        <p class="a-cmo-detail-bio">{{$student->bio}}</p>
     </div>
     <div class="o-cmo-detail-main">
 
