@@ -101,7 +101,18 @@ class PortfolioController extends Controller
             ]);
 
     }
+    public function getNMDDetail(Student $student)
+    {
+        $images = Image::where('student_id', $student->id)->get();
 
+        // echo '<pre>' . var_export($images, true) . '</pre>';
+
+        return view('pages.nmd-detail', [
+            'sub_header' => $student->first_name . ' <br> ' . $student->last_name,
+            'images' => $images,
+            'student' => $student
+        ]);
+    }
     public function getGMB()
     {
 

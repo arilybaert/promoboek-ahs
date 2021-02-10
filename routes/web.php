@@ -29,6 +29,7 @@ Route::get('/portfolio-nmd', [PortfolioController::class, 'getNMD'])->name('port
 Route::get('/portfolio-gmb', [PortfolioController::class, 'getGMB'])->name('portfolio-gmb');
 
 Route::get('/portfolio-cmo/{student}', [PortfolioController::class, 'getCMODetail'])->name('portfolio-cmo-detail');
+Route::get('/portfolio-nmd/{student}', [PortfolioController::class, 'getNMDDetail'])->name('portfolio-nmd-detail');
 
 Route::get('/yearbook/{id?}', [YearbookController::class , 'getIndex'])->name('yearbook');
 Route::get('/jobs', [JobController::class, 'getIndex'])->name('jobs');
