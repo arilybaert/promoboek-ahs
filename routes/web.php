@@ -27,6 +27,8 @@ Route::get('/portfolio-avd', [PortfolioController::class, 'getAVD'])->name('port
 Route::get('/portfolio-nmd', [PortfolioController::class, 'getNMD'])->name('portfolio-nmd');
 
 Route::get('/portfolio-gmb', [PortfolioController::class, 'getGMB'])->name('portfolio-gmb');
+Route::get('/portfolio-gmb/printmedia', [PortfolioController::class, 'getGMBPM'])->name('portfolio-gmb-pm');
+Route::get('/portfolio-gmb/crossmedia', [PortfolioController::class, 'getGMBCM'])->name('portfolio-gmb-cm');
 
 Route::get('/portfolio-cmo/{student}', [PortfolioController::class, 'getCMODetail'])->name('portfolio-cmo-detail');
 Route::get('/portfolio-nmd/{student}', [PortfolioController::class, 'getNMDDetail'])->name('portfolio-nmd-detail');

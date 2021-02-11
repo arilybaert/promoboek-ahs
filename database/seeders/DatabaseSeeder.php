@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         ** COURSE
         */
 
-
+/*
         $cmo = Course::factory()->create([
             'title' => 'Crossmedia-ontwerp',
             'title_short' => 'cmo',
@@ -43,12 +43,12 @@ class DatabaseSeeder extends Seeder
             'title_short' => 'gmb',
             'img_url' => 'src/img/home/gmb.jpg',
         ]);
-
+*/
         /*
         ** SUB_COURSE
         */
 
-
+/*
         $gd = Sub_course::factory()->create([
             'title' => 'Graphic Design',
             'title_short' => 'graphic-design',
@@ -59,11 +59,21 @@ class DatabaseSeeder extends Seeder
             'title_short' => 'photo-design',
             'course_id' => 1
         ]);
-
+        $pm = Sub_course::factory()->create([
+            'title' => 'Printmedia',
+            'title_short' => 'printmedia',
+            'course_id' => 4
+        ]);
+        $cm = Sub_course::factory()->create([
+            'title' => 'Photo Design',
+            'title_short' => 'crossmedia',
+            'course_id' => 4
+        ]);
+*/
         /*
         ** STUDENTS
         */
-
+/*
         // CMO GD
         for($i = 1; $i < 6; $i++) {
             $students = Student::factory()->create([
@@ -79,18 +89,35 @@ class DatabaseSeeder extends Seeder
                 'sub_course_id' => '2',
             ]);
         }
+
         // NMD
         for($i = 11; $i < 21; $i++) {
             $students = Student::factory()->create([
                 'course_id' => '3',
             ]);
             }
+*/
+        // GMB PM
+        for($i = 1; $i < 6; $i++) {
+            $students = Student::factory()->create([
+                'course_id' => '4',
+                'sub_course_id' => '3',
+            ]);
+        }
+
+        // GMB CM
+        for($i = 6; $i < 11; $i++) {
+            $students = Student::factory()->create([
+                'course_id' => '4',
+                'sub_course_id' => '4',
+            ]);
+        }
 
 
         /*
         ** IMAGE
         */
-
+/*
         // each student gets thumbnail image
         // cmo
         for($i = 1; $i < 11; $i++) {
@@ -107,6 +134,15 @@ class DatabaseSeeder extends Seeder
                 'url' => 'src/img/portfolio/nmd/nmd-'. rand(1,9) .'.png',
                 'student_id' => $i,
                 'thumbnail' => 1
+            ]);
+        }
+*/
+        // gmb
+        for($i = 21; $i < 31; $i++) {
+            $images = Image::factory()->create([
+                'url' => 'src/img/portfolio/cmo/cmo-'. rand(1,9) .'.jpg',
+                'student_id' => $i,
+                'thumbnail' => 1,
             ]);
         }
 
