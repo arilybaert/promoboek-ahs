@@ -328,6 +328,14 @@ i.fa-times {
 .o-nmd-card:hover img{
     transform: scale(1.02);
 }
+.o-nmd-card a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+a.o-nmd-card:hover {
+    color: hotpink;
+    text-decoration: none;
+}
 .a-nmd-image {
 
     width: 100%;
