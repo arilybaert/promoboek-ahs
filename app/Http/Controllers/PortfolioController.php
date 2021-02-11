@@ -113,9 +113,62 @@ class PortfolioController extends Controller
             'student' => $student
         ]);
     }
+
     public function getGMB()
     {
+        // $sub_courses = Sub_course::where('course_id', 1)->get();
 
+        // Show thumbail picture for each student
+
+        $students = Student::where('course_id', '4')
+        ->join('images', function ($join) {
+            $join->on('students.id', '=', 'images.student_id')
+                 ->where('images.thumbnail', '=', 1);
+        })->get();
+
+        // echo '<pre>' . var_export($students, true) . '</pre>';
+
+
+        return view('pages.gmb-home', [
+            // 'sub_courses' => $sub_courses,
+            'students' => $students,
+            'sub_header' => 'Grafimediabeleid',
+            ]);
+    }
+    public function getGMBPM()
+    {
+        // Show thumbail picture for each student
+
+        $students = Student::where('course_id', '4')
+        ->where('sub_course_id', '3')
+        ->join('images', function ($join) {
+            $join->on('students.id', '=', 'images.student_id')
+                 ->where('images.thumbnail', '=', 1);
+        })->get();
+
+        return view('pages.gmb-home', [
+            // 'sub_courses' => $sub_courses,
+            'students' => $students,
+            'sub_header' => 'Photo Design',
+            ]);
+    }
+
+    public function getGMBCM()
+    {
+        // Show thumbail picture for each student
+
+        $students = Student::where('course_id', '4')
+        ->where('sub_course_id', '4')
+        ->join('images', function ($join) {
+            $join->on('students.id', '=', 'images.student_id')
+                 ->where('images.thumbnail', '=', 1);
+        })->get();
+
+        return view('pages.gmb-home', [
+            // 'sub_courses' => $sub_courses,
+            'students' => $students,
+            'sub_header' => 'Graphic Design',
+            ]);
     }
 
 }
