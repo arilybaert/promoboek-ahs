@@ -62,7 +62,7 @@
 
                                     <div class="col-2 m-cmo-portfolioBtn">
                                         <i class="fas fa-times close"></i>
-                                        <a class="a-cmo-portfolioBtn" href="https://www.site.com">
+                                        <a class="a-cmo-portfolioBtn" href="https://www.google.com">
                                             <span>website</span>
                                         </a>
                                     </div>
