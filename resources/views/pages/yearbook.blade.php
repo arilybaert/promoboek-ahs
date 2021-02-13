@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-<h1 class="a-page-title">Yearbook</h1>
 
     <div class="o-yearbook-filter">
         @foreach ($courses as $course)
@@ -10,117 +9,18 @@
         @endforeach
 
     </div>
-    <div class="o-yearbook-students container-fluid">
+    <div class="o-yearbook-students">
 
         @foreach ($students as $student)
-            <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-                <img class="a-yearbook-profilepicture" src="{{ asset($student->profile)}}" alt="">
+            <div class="o-studentcards col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="m-yearbook-image-container">
+                    <img class="a-yearbook-profilepicture" src="{{ asset($student->profile)}}" alt="">
+                    <p class="a-yearbook-student-major">{{ strtoupper($student->course->title_short)}}</p>
+                </div>
                 <h2 class="a-yearbook-student-name">{{ $student->first_name . ' ' . $student->last_name }}</h2>
-                <p class="a-yearbook-student-major">{{ $student->course->title}}</p>
             </div>
         @endforeach
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
 
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-
-
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
-        <div class="o-studentcards col-sm-12 col-md-4 col-lg-2 col-xl-2">
-            <img class="a-yearbook-profilepicture" src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F10%2Fmark-zuckerberg-1-2000.jpg" alt="">
-            <h2 class="a-yearbook-student-name">Mark Zuckerberg</h2>
-            <p class="a-yearbook-student-major">Croos Media Ontwerp</p>
-        </div>
     </div>
 
 
