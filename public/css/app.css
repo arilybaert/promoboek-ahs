@@ -448,23 +448,60 @@ a.o-nmd-card:hover {
     width: 70vw;
 }
 .o-yearbook-students::after {
-    content: '';
-    flex: auto;
+    width: 80%;
 }
 
 .o-studentcards {
-    flex: 10% 0 0;
+    /* flex: 10% 0 0; */
     padding: 0.5rem;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+.m-yearbook-image-container {
+    position: relative;
 
+    width: -webkit-min-content;
+
+    width: -moz-min-content;
+
+    width: min-content;
+
+}
 .a-yearbook-profilepicture {
-    width: 100%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .a-yearbook-student-name {
     text-align: center;
 }
 .a-yearbook-student-major {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     text-align: center;
+    position: absolute;
+    background-color: var(--color-cmo);
+    color: var(--color-white);
+    border: 7px solid var(--color-white);
+    height: 9vh;
+    width: 9vh;
+    border-radius: 50%;
+    font-weight: 800;
+    bottom: 0;
+    right: 0;
+}
+.a-yearbook-student-name {
+    color: #C4314B;
+    font-weight: 600;
+    font-size: 16pt;
+    padding-top: 0.7rem;
 }
 
 /* Header */
