@@ -8,6 +8,8 @@ class JobController extends Controller
 {
     public function getIndex()
     {
-        return view('pages.jobs');
+        return view('pages.jobs', [
+            'sub_header' => 'Zoekertjes'
+        ]);
     }
 }
