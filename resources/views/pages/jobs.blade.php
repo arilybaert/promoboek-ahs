@@ -2,8 +2,12 @@
 
 @section('content')
 
+
 <div class="o-jobcontainer">
 
+    <div class="col-12 m-job-new-link">
+        <a href="{{route('jobs-new')}}" class="a-job-new-link"> + Nieuw zoekertje plaatsen</a>
+    </div>
     <div class="col-12 o-job-card">
         <div class="row">
             <div class="col-8">
