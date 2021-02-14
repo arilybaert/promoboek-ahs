@@ -3,6 +3,21 @@
     width: 80%;
     margin: 0 auto;
 }
+.m-job-new-link {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--color-accent);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+a.a-job-new-link:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+a.a-job-new-link:link {
+    color: var(--color-accent);
+}
+
 .o-job-card {
     border: 3px solid var(--color-border);
     border-radius: 1.4rem;
@@ -30,7 +45,7 @@
 }
 .o-job-contact {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .a-job-contact {
     background-color: var(--color-accent);

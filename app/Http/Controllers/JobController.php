@@ -12,4 +12,11 @@ class JobController extends Controller
             'sub_header' => 'Zoekertjes'
         ]);
     }
+
+    public function createJob()
+    {
+        return view('pages.jobs-new', [
+            'sub_header' => 'Zoekertjes'
+        ]);
+    }
 }

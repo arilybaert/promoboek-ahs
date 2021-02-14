@@ -36,3 +36,4 @@ Route::get('/portfolio-nmd/{student}', [PortfolioController::class, 'getNMDDetai
 
 Route::get('/yearbook/{id?}', [YearbookController::class , 'getIndex'])->name('yearbook');
 Route::get('/jobs', [JobController::class, 'getIndex'])->name('jobs');
+Route::get('/jobs/new', [JobController::class, 'createJob'])->name('jobs-new');
