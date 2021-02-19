@@ -1,13 +1,9 @@
 <?php
 
-// namespace Database\Seeders;
+namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
-use App\Models\Student;
-use App\Models\Course;
-use App\Models\Image;
-use App\Models\Sub_course;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,7 +14,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        /*
+        // \App\Models\User::factory(10)->create();
+        // $admin = User::factory()->create([
+        //     'name' => 'Kris Raes',
+        //     'email' => 'krisraes@ahs.be',
+        //     'password' => bcrypt('secret'),
+        //     'role' => 1
+        // ]);
+        // $student = User::factory()->create([
+        //     'name' => 'Ari Lybaert',
+        //     'email' => 'arilybaert@ahs.be',
+        //     'password' => bcrypt('secret'),
+        //     'role' => 2
+        // ]);
+
+                /*
         ** COURSE
         */
 
@@ -73,43 +83,53 @@ class DatabaseSeeder extends Seeder
         /*
         ** STUDENTS
         */
-/*
+
         // CMO GD
         for($i = 1; $i < 6; $i++) {
-            $students = Student::factory()->create([
+            $students = User::factory()->create([
                 'course_id' => '1',
                 'sub_course_id' => '1',
+                'password' => bcrypt('secret'),
+                'role' => 2
             ]);
         }
 
         // CMO PD
         for($i = 6; $i < 11; $i++) {
-            $students = Student::factory()->create([
+            $students = User::factory()->create([
                 'course_id' => '1',
                 'sub_course_id' => '2',
+                'password' => bcrypt('secret'),
+                'role' => 2
             ]);
         }
 
         // NMD
         for($i = 11; $i < 21; $i++) {
-            $students = Student::factory()->create([
+            $students = User::factory()->create([
                 'course_id' => '3',
+                'password' => bcrypt('secret'),
+                'role' => 2
             ]);
-            }
-*/
+        }
+
         // GMB PM
         for($i = 1; $i < 6; $i++) {
-            $students = Student::factory()->create([
+            $students = User::factory()->create([
                 'course_id' => '4',
                 'sub_course_id' => '3',
+                'password' => bcrypt('secret'),
+                'role' => 2
             ]);
         }
 
         // GMB CM
         for($i = 6; $i < 11; $i++) {
-            $students = Student::factory()->create([
+            $students = User::factory()->create([
                 'course_id' => '4',
                 'sub_course_id' => '4',
+                'password' => bcrypt('secret'),
+                'role' => 2
             ]);
         }
 
@@ -136,7 +156,7 @@ class DatabaseSeeder extends Seeder
                 'thumbnail' => 1
             ]);
         }
-*/
+
         // gmb
         for($i = 21; $i < 31; $i++) {
             $images = Image::factory()->create([
@@ -145,7 +165,7 @@ class DatabaseSeeder extends Seeder
                 'thumbnail' => 1,
             ]);
         }
-
+*/
         /*
         // each student gets other portfolio images
         for($j = 0; $j < 4; $j++) {

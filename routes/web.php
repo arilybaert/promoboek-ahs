@@ -1,11 +1,7 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PortfolioController;
-use App\Http\Controllers\YearbookController;
-use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,23 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'getIndex'])->name('home');
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/portfolio-cmo', [PortfolioController::class, 'getCMO'])->name('portfolio-cmo');
-Route::get('/portfolio-cmo/graphic-design', [PortfolioController::class, 'getCMOGD'])->name('portfolio-cmo-gd');
-Route::get('/portfolio-cmo/photo-design', [PortfolioController::class, 'getCMOPD'])->name('portfolio-cmo-pd');
+Auth::routes();
 
-Route::get('/portfolio-avd', [PortfolioController::class, 'getAVD'])->name('portfolio-avd');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/portfolio-nmd', [PortfolioController::class, 'getNMD'])->name('portfolio-nmd');
 
-Route::get('/portfolio-gmb', [PortfolioController::class, 'getGMB'])->name('portfolio-gmb');
-Route::get('/portfolio-gmb/printmedia', [PortfolioController::class, 'getGMBPM'])->name('portfolio-gmb-pm');
-Route::get('/portfolio-gmb/crossmedia', [PortfolioController::class, 'getGMBCM'])->name('portfolio-gmb-cm');
-
-Route::get('/portfolio-cmo/{student}', [PortfolioController::class, 'getCMODetail'])->name('portfolio-cmo-detail');
-Route::get('/portfolio-nmd/{student}', [PortfolioController::class, 'getNMDDetail'])->name('portfolio-nmd-detail');
-
-Route::get('/yearbook/{id?}', [YearbookController::class , 'getIndex'])->name('yearbook');
-Route::get('/jobs', [JobController::class, 'getIndex'])->name('jobs');
-Route::get('/jobs/new', [JobController::class, 'createJob'])->name('jobs-new');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin');
+Route::get('/student', [App\Http\Controllers\StudentController::class, 'index'])->name('student')->middleware('student');
+Route::post('/student/edit/{user}', [App\Http\Controllers\StudentController::class, 'postUser'])->name('student.edit')->middleware('student');
+Route::get('/student/edit/image/{image}', [App\Http\Controllers\StudentController::class, 'getUserImage'])->name('portfolio.image')->middleware('student');
+Route::post('/student/edit/image/{image}', [App\Http\Controllers\StudentController::class, 'postUserImage'])->name('portfolio.image.edit')->middleware('student');
+Route::get('/student/image/new', [App\Http\Controllers\StudentController::class, 'createUserImage'])->name('portfolio.image.new')->middleware('student');
+Route::post('/student/image/new', [App\Http\Controllers\StudentController::class, 'postUserNewImage'])->name('portfolio.image.create')->middleware('student');
+Route::get('/student/image/delete/{id}', [App\Http\Controllers\StudentController::class, 'imageDelete'])->name('portfolio.image.delete')->middleware('student');
