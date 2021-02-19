@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Str;
 
-
 return [
 
     /*
@@ -16,9 +15,7 @@ return [
     |
     */
 
-    // ORIGINAL
-    // 'default' => env('DB_CONNECTION', 'mysql'),
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +63,6 @@ return [
             ]) : [],
         ],
 
-        // ORIGINAL
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
@@ -81,20 +77,6 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
-        // 'pgsql' => [
-        //     'driver' => 'pgsql',
-        //     'url' => $DATABASE_URL["host"],
-        //     'host' => $DATABASE_URL["host"],
-        //     'port' => $DATABASE_URL["port"],
-        //     'database' => ltrim($DATABASE_URL["host"], "/"),
-        //     'username' => $DATABASE_URL["user"],
-        //     'password' => $DATABASE_URL["pass"],
-        //     'charset' => 'utf8',
-        //     'prefix' => '',
-        //     'prefix_indexes' => true,
-        //     'schema' => 'public',
-        //     'sslmode' => 'prefer',
-        // ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

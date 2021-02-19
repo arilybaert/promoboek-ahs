@@ -6,11 +6,26 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+    public function course(): BelongsTo
+    {
+        return $this->belongsTo(Course::class);
+    }
 
+    public function sub_course(): BelongsTo
+    {
+        return $this->belongsTo(Sub_course::class);
+    }
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(Image::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -20,6 +35,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'bio',
+        'catchphrase'
     ];
 
     /**

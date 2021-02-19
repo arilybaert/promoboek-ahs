@@ -2,21 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
-
+        $this->middleware('auth');
     }
-    public function getIndex()
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
     {
-        $courses = Course::all();
-        return view('pages.home', [
-            'courses' => $courses,
-            'sub_header' => '2020 - 2021'
-        ]);
+        return view('home');
     }
 }

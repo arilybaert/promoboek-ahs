@@ -24,6 +24,13 @@
       0 => 'Fruitcake\\Cors\\CorsServiceProvider',
     ),
   ),
+  'laravel/sail' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Sail\\SailServiceProvider',
+    ),
+  ),
   'laravel/tinker' => 
   array (
     'providers' => 
@@ -31,11 +38,11 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
-  'mll-lab/laravel-graphql-playground' => 
+  'laravel/ui' => 
   array (
     'providers' => 
     array (
-      0 => 'MLL\\GraphQLPlayground\\GraphQLPlaygroundServiceProvider',
+      0 => 'Laravel\\Ui\\UiServiceProvider',
     ),
   ),
   'nesbot/carbon' => 
@@ -50,19 +57,6 @@
     'providers' => 
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    ),
-  ),
-  'nuwave/lighthouse' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Nuwave\\Lighthouse\\LighthouseServiceProvider',
-      1 => 'Nuwave\\Lighthouse\\OrderBy\\OrderByServiceProvider',
-      2 => 'Nuwave\\Lighthouse\\SoftDeletes\\SoftDeletesServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'graphql' => 'Nuwave\\Lighthouse\\GraphQL',
     ),
   ),
 );
