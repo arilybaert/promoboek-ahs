@@ -22,6 +22,7 @@ class StudentController extends Controller
         ]);
     }
 
+    // Update porfolio
     public function postUser(User $user, Request $r)
     {
         $validationRules = [
@@ -42,6 +43,7 @@ class StudentController extends Controller
         return redirect()->route('student');
     }
 
+
     public function getUserImage(Image $image)
     {
 
@@ -50,6 +52,7 @@ class StudentController extends Controller
         ]);
     }
 
+    // update porfolio image
     public function postUserImage(Image $image, Request $r)
     {
         $id = Auth::user()->id;
@@ -107,11 +110,13 @@ class StudentController extends Controller
     }
 
 
+    // upload image form
     public function createUserImage()
     {
         return view('backoffice.student-new-image');
     }
 
+    // upload image
     public function postUserNewImage(Request $r)
     {
 
@@ -175,10 +180,17 @@ class StudentController extends Controller
 
     }
 
+    // delete image
     public function imageDelete(Request $r) {
 
         Image::find($r->id)->delete();
 
         return redirect()->route('student');
+    }
+
+    // show pending verification
+    public function getPendingVerification()
+    {
+        return view('backoffice.student-pending-verification');
     }
 }
