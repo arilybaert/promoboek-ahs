@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Course;
+use App\Models\Job;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,12 +16,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // jobs
+        for($i = 1; $i < 8; $i++) {
+            $jobs = Job::factory()->create();
+        }
+
+    // users
+
         // $admin = User::factory()->create([
-        //     'name' => 'Kris Raes',
-        //     'email' => 'krisraes@ahs.be',
+        //     'first_name' => 'Dieter',
+        //     'last_name' => 'Wullaert',
+        //     'email' => 'dwullaert@ahs.be',
         //     'password' => bcrypt('secret'),
-        //     'role' => 1
+        //     'role' => 2,
+        //     'course_id' => 5,
         // ]);
         // $student = User::factory()->create([
         //     'name' => 'Ari Lybaert',
@@ -28,11 +38,11 @@ class DatabaseSeeder extends Seeder
         //     'role' => 2
         // ]);
 
-                /*
+        /*
         ** COURSE
         */
 
-/*
+        /*
         $cmo = Course::factory()->create([
             'title' => 'Crossmedia-ontwerp',
             'title_short' => 'cmo',
@@ -52,6 +62,11 @@ class DatabaseSeeder extends Seeder
             'title' => 'Grafimedia Beleid',
             'title_short' => 'gmb',
             'img_url' => 'src/img/home/gmb.jpg',
+        ]);
+        $teacher = Course::factory()->create([
+            'title' => 'Teacher',
+            'title_short' => 'teacher',
+            'img_url' => '',
         ]);
 */
         /*
@@ -83,7 +98,7 @@ class DatabaseSeeder extends Seeder
         /*
         ** STUDENTS
         */
-
+/*
         // CMO GD
         for($i = 1; $i < 6; $i++) {
             $students = User::factory()->create([
@@ -132,7 +147,7 @@ class DatabaseSeeder extends Seeder
                 'role' => 2
             ]);
         }
-
+*/
 
         /*
         ** IMAGE

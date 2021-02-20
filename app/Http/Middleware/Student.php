@@ -25,6 +25,10 @@ class Student
             return redirect()->route('admin');
         }
 
+        if (Auth::user()->request == true) {
+            return redirect()->route('pending-verification');
+        }
+
         if (Auth::user()->role == 2) {
             return $next($request);
         }

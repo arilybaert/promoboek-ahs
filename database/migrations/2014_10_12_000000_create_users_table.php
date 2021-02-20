@@ -22,6 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('bio', 1000);
             $table->string('catchphrase');
             $table->string('profile');
+            $table->boolean('request')->default(false);
+
+
             $table->foreignId('course_id')->references('id')->on('courses');
             $table->foreignId('sub_course_id')->nullable()->references('id')->on('sub_courses')->nullable();
 
