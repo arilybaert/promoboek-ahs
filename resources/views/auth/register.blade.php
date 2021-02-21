@@ -12,17 +12,33 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="first_name" class="col-md-4 col-form-label text-md-right">{{ __('Firstname') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
 
-                                @error('name')
+                                @error('first_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="last_name" class="col-md-4 col-form-label text-md-right">{{ __('Lastname') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="last_name" type="text" class="form-control @error('name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+
+                                @error('last_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
                         </div>
 
                         <div class="form-group row">
@@ -36,6 +52,50 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="course" class="col-md-4 col-form-label text-md-right">{{ __('Course') }}</label>
+
+                            <div class="col-md-6">
+
+                                <select id="course"  name="course" class="form-select @error('course') is-invalid @enderror" aria-label="Default select example" required>
+                                    <option selected disabled>Open this select menu</option>
+                                    <option value="1">CMO</option>
+                                    <option value="2">AVD</option>
+                                    <option value="3">NMD</option>
+                                    <option value="4">GMB</option>
+                                    <option value="5">Teacher</option>
+                                </select>
+
+                                  @error('course')
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message }}</strong>
+                                  </span>
+                              @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="sub_course" class="col-md-4 col-form-label text-md-right">{{ __('Major') }}</label>
+
+                            <div class="col-md-6">
+
+                                <select id="sub_course"  name="sub_course" class="form-select @error('sub_course') is-invalid @enderror" aria-label="Default select example" required>
+                                    <option selected disabled>Open this select menu</option>
+                                    <option>None</option>
+                                    <option value="1">CMO: Grafic Design</option>
+                                    <option value="2">CMO: Photodesign</option>
+                                    <option value="3">GMB: Printmedia</option>
+                                    <option value="4">GMB: Crossmedia</option>
+                                </select>
+
+                                  @error('course')
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message }}</strong>
+                                  </span>
+                              @enderror
                             </div>
                         </div>
 

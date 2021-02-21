@@ -27,7 +27,12 @@ Route::get('/admin/make/admin/{user}', [App\Http\Controllers\AdminController::cl
 Route::get('/admin/make/user/{user}', [App\Http\Controllers\AdminController::class, 'makeUser'])->name('user.make')->middleware('admin');
 Route::get('/admin/toggle-account/{user}', [App\Http\Controllers\AdminController::class, 'makeAdmin'])->name('admin.toggle.account')->middleware('admin');
 
+// ADMIN JOBS
 Route::get('/admin/jobs', [App\Http\Controllers\AdminController::class, 'getJobs'])->name('admin.jobs')->middleware('admin');
+
+Route::get('/admin/jobs/accept/{job}', [App\Http\Controllers\AdminController::class, 'acceptJob'])->name('admin.jobs.accept')->middleware('admin');
+Route::get('/admin/jobs/complete/{job}', [App\Http\Controllers\AdminController::class, 'completeJob'])->name('admin.jobs.complete')->middleware('admin');
+Route::get('/admin/jobs/delete/{job}', [App\Http\Controllers\AdminController::class, 'deleteJob'])->name('admin.jobs.delete')->middleware('admin');
 
 // STUDENT BACKOFFICE
 Route::get('/student', [App\Http\Controllers\StudentController::class, 'index'])->name('student')->middleware('student');

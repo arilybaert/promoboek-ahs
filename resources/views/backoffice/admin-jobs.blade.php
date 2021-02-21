@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-admin')
 @section('content')
 <div class="container">
     <div class="row">
@@ -29,8 +29,8 @@
                         <td>{{ $pending_job->first_name . ' ' . $pending_job->last_name}}</td>
                         <td>{{ $pending_job->deadline}}</td>
                         <td>
-                            <a href="{{route('portfolio.image.edit', $pending_job->id)}}" type="button" class="btn btn-success">Accept</a>
-                            <a href="{{route('admin.toggle.account', $pending_job->id )}}" type="button" class="btn btn-danger">Delete</a>
+                            <a href="{{route('admin.jobs.accept', $pending_job->id)}}" type="button" class="btn btn-success">Accept</a>
+                            <a href="{{route('admin.jobs.delete', $pending_job->id )}}" type="button" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
@@ -66,8 +66,8 @@
                         <td>{{ $accepted_job->first_name . ' ' . $accepted_job->last_name}}</td>
                         <td>{{ $accepted_job->deadline}}</td>
                         <td>
-                            <a href="{{route('portfolio.image.edit', $accepted_job->id)}}" type="button" class="btn btn-primary">Completed</a>
-                            <a href="{{route('admin.toggle.account', $accepted_job->id )}}" type="button" class="btn btn-danger">Delete</a>
+                            <a href="{{route('admin.jobs.complete', $accepted_job->id)}}" type="button" class="btn btn-primary">Completed</a>
+                            <a href="{{route('admin.jobs.delete', $accepted_job->id )}}" type="button" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
@@ -104,7 +104,7 @@
                         <td>{{ $completed_job->first_name . ' ' . $completed_job->last_name}}</td>
                         <td>{{ $completed_job->deadline}}</td>
                         <td>
-                            <a href="{{route('admin.toggle.account', $completed_job->id )}}" type="button" class="btn btn-danger">Delete</a>
+                            <a href="{{route('admin.jobs.delete', $completed_job->id )}}" type="button" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach

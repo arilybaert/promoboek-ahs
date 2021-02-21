@@ -71,9 +71,9 @@ class AdminController extends Controller
 
     public function getJobs()
     {
-        $pending_jobs = Job::where('pending', true)->get();
-        $accepted_jobs = Job::where('pending', false)->where('completed', false)->get();
-        $completed_jobs = Job::where('completed', true)->get();
+        $pending_jobs = Job::where('pending', true)->orderBy('deadline')->get();
+        $accepted_jobs = Job::where('pending', false)->orderBy('deadline')->where('completed', false)->get();
+        $completed_jobs = Job::where('completed', true)->orderBy('deadline')->get();
 
 
         return view('backoffice.admin-jobs', [
@@ -95,6 +95,7 @@ class AdminController extends Controller
         };
         return redirect()->route('admin.jobs');
     }
+
     public function completeJob(Job $job)
     {
         $data = [
@@ -105,6 +106,12 @@ class AdminController extends Controller
             $job = Job::where('id', $job->id)->first();
             $job->update($data);
         };
+        return redirect()->route('admin.jobs');
+    }
+
+    public function deleteJob(Job $job)
+    {
+        Job::find($job->id)->delete();
         return redirect()->route('admin.jobs');
     }
 }
