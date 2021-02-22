@@ -65,7 +65,12 @@ class AdminController extends Controller
             $user = User::where('id', $user->id)->first();
             $user->update($data);
         };
-        return redirect()->route('admin');
+
+        // return redirect()->route('admin');
+        return redirect()->route('send-account-activation', [
+            'name' => $user->first_name,
+            'email' => $user->email
+        ]);
 
     }
 
