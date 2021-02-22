@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -25,7 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin');
 Route::get('/admin/make/admin/{user}', [App\Http\Controllers\AdminController::class, 'makeAdmin'])->name('admin.make')->middleware('admin');
 Route::get('/admin/make/user/{user}', [App\Http\Controllers\AdminController::class, 'makeUser'])->name('user.make')->middleware('admin');
-Route::get('/admin/toggle-account/{user}', [App\Http\Controllers\AdminController::class, 'makeAdmin'])->name('admin.toggle.account')->middleware('admin');
+Route::get('/admin/toggle-account/{user}', [App\Http\Controllers\AdminController::class, 'toggleUserAccount'])->name('admin.toggle.account')->middleware('admin');
 
 // ADMIN JOBS
 Route::get('/admin/jobs', [App\Http\Controllers\AdminController::class, 'getJobs'])->name('admin.jobs')->middleware('admin');
@@ -45,3 +44,7 @@ Route::get('/student/image/delete/{id}', [App\Http\Controllers\StudentController
 
 // ACCOUNT VERIFICATION
 Route::get('/student/pending', [App\Http\Controllers\StudentController::class, 'getPendingVerification'])->name('pending-verification');
+
+// EMAIL
+
+Route::get('send-mail/{email}/{name}', [App\Http\Controllers\MailController::class, 'sendAccountActivation'])->name('send-account-activation');
