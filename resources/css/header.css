@@ -4,8 +4,8 @@ body {
 }
 .o-login {
     position: relative;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
     display: flex;
     flex-direction: column;
     width: 50px;
@@ -13,6 +13,9 @@ body {
     color: var(--color-accent);
     font-weight: bold;
     padding-bottom: 0.5rem;
+}
+.a-dashboard-logo {
+    font-size: 23pt;
 }
 a.o-login:hover {
     text-decoration: none;

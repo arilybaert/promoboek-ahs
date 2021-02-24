@@ -10028,6 +10028,8 @@ h3 {
     --color-border: #FCE28A;
     --color-portfolio-home-text: #F38181;
     --box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.57);
+
+    --color-input: hsla(0, 47%, 95%, 25);
 }
 
 /* Background colors  */
@@ -10664,7 +10666,7 @@ a.a-job-confirmation-home-link:link {
     padding-right: 1rem;
 }
 .a-new-job-input {
-    background-color: hsla(0, 47%, 95%, 25);
+    background-color: var(--color-input);
     border: none;
     border-radius: 9rem;
     padding-left: 1rem;
@@ -10677,7 +10679,7 @@ a.a-job-confirmation-home-link:link {
     text-align: center;
 }
 .a-new-job-input-textArea {
-    background-color: hsla(0, 47%, 95%, 25);
+    background-color: var(--color-input);
     border: none;
     border-radius: 1rem;
     padding-left: 1rem;
@@ -10708,8 +10710,8 @@ body {
 }
 .o-login {
     position: relative;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
     display: flex;
     flex-direction: column;
     width: 50px;
@@ -10717,6 +10719,9 @@ body {
     color: var(--color-accent);
     font-weight: bold;
     padding-bottom: 0.5rem;
+}
+.a-dashboard-logo {
+    font-size: 23pt;
 }
 a.o-login:hover {
     text-decoration: none;
@@ -10843,6 +10848,55 @@ a.a-link:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.o-login-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    border-radius: 15px;
+    border: 3px solid var(--color-border);
+    padding: 3rem;
+}
+.m-login-menu {
+    width: 70vw;
+}
+.a-login-label {
+    text-align: right;
+    font-weight: bold;
+    color: var(--color-accent);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.a-login-input {
+    background-color: hsla(0, 47%, 95%, 25);
+    border: none;
+    border-radius: 9rem;
+    padding-left: 1rem;
+    color: var(--color-accent);
+    width: 250px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+.a-login-button {
+    border: 3px solid var(--color-white);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-weight: bold;
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+}
+.a-login-button:hover {
+    border: 3px solid var(--color-accent);
+    background-color: var(--color-white);
+    color: var(--color-accent);
+}
+.a-remember-me {
+    color: var(--color-accent);
+    padding-left: 0.5rem;
 }
 
 body {

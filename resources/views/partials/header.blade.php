@@ -10,10 +10,24 @@
     <script src="https://kit.fontawesome.com/1f9fa605a9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <a class="o-login" href="{{ route('login')}} ">
-        <img src="{{ asset('/src/img/logo/login.png')}}" alt="login" class="a-login-logo">
-        <span>Login</span>
-    </a>
+
+    <?php
+        if (Auth::check()) {
+    ?>
+            <a class="o-login" href="{{ route('admin')}} ">
+                <i class="fas fa-tachometer-alt a-dashboard-logo"></i>
+                <span>Dashboard</span>
+            </a>
+    <?php
+        } else {
+    ?>
+            <a class="o-login" href="{{ route('login')}} ">
+                <img src="{{ asset('/src/img/logo/login.png')}}" alt="login" class="a-login-logo">
+                <span>Login</span>
+            </a>
+    <?php
+        }
+    ?>
 <header class="o-header container">
 
     <div class="m-headerTop row">
@@ -29,7 +43,10 @@
 
     <div class="m-headerBottom row">
         <span class=" a-line a-lineLeft col-2 col-sm-3 col-md-4"></span>
-        <span class="a-subHeader col-8 col-sm-6 col-md-4">{{$sub_header}}</span>
+        <?php
+            $header = \Route::current()->getName();
+        ?>
+        <span class="a-subHeader col-8 col-sm-6 col-md-4">{{$sub_header ?? $header}}</span>
         <span class="a-line a-lineRight col-2 col-sm-3 col-md-4"></span>
     </div>
 

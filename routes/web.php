@@ -48,6 +48,11 @@ Auth::routes();
 
 // ADMIN BACKOFFICE
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin');
+Route::get('/admin/cmo', [App\Http\Controllers\AdminController::class, 'getCMO'])->name('adminCMO')->middleware('admin');
+Route::get('/admin/avd', [App\Http\Controllers\AdminController::class, 'getAVD'])->name('adminAVD')->middleware('admin');
+Route::get('/admin/nmd', [App\Http\Controllers\AdminController::class, 'getNMD'])->name('adminNMD')->middleware('admin');
+Route::get('/admin/gmb', [App\Http\Controllers\AdminController::class, 'getGMB'])->name('adminGMB')->middleware('admin');
+
 Route::get('/admin/make/admin/{user}', [App\Http\Controllers\AdminController::class, 'makeAdmin'])->name('admin.make')->middleware('admin');
 Route::get('/admin/make/user/{user}', [App\Http\Controllers\AdminController::class, 'makeUser'])->name('user.make')->middleware('admin');
 Route::get('/admin/toggle-account/{user}', [App\Http\Controllers\AdminController::class, 'toggleUserAccount'])->name('admin.toggle.account')->middleware('admin');
