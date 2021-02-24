@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -84,7 +85,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // dd($data);
+        $details = [
+            'title' => 'Administrator',
+            'body' => 'There is a new account submission by ' . $data['first_name'] . ' ' . $data['last_name']
+        ];
+        Mail::to('ari_lybaert@outlook.com')->send(new \App\Mail\NotificationMail($details));
+
         if(strlen($data['sub_course']) == 1) {
             return User::create([
                 'first_name' => $data['first_name'],
@@ -114,4 +120,6 @@ class RegisterController extends Controller
         ]);
         }
     }
+
+
 }

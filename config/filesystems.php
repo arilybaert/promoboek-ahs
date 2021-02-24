@@ -55,6 +55,10 @@ return [
             'driver' => 'local',
             'root'   => public_path() . '/src/img/portfolio',
         ],
+        'profile_files' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/src/img',
+        ],
 
     ],
 

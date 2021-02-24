@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Course;
+use App\Models\Sub_course;
 use App\Models\Job;
 
 class AdminController extends Controller
 {
+    /* ********************************** USERS ********************************** */
+
+    // ADMIN DASHBOARD
     public function index()
     {
         $requests = User::where('request', true)->orderBy('last_name')->get();
@@ -29,6 +34,7 @@ class AdminController extends Controller
         ]);
     }
 
+    // UPGRADE USER TO ADMINISTRATOR
     public function makeAdmin(User $user)
     {
         $data = [
@@ -42,6 +48,7 @@ class AdminController extends Controller
         return redirect()->route('admin');
     }
 
+    // DOWNGRADE ADMINISTRATOR TO USER
     public function makeUser(User $user)
     {
         $data = [
@@ -55,6 +62,7 @@ class AdminController extends Controller
         return redirect()->route('admin');
     }
 
+    // TOGGLE ACCOUNT ON/OFF
     public function toggleUserAccount(User $user)
     {
         $data = [
@@ -71,9 +79,45 @@ class AdminController extends Controller
             'name' => $user->first_name,
             'email' => $user->email
         ]);
-
     }
 
+    public function getUserInfo(User $user)
+    {
+        // dd($user);
+        $courses = Course::all();
+        $sub_courses = Sub_course::all();
+        return view('backoffice.admin-user-edit', [
+            'user' => $user,
+            'courses' => $courses,
+            'sub_courses' => $sub_courses
+        ]);
+    }
+
+    public function postUserInfo(Request $r)
+    {
+        $r->file->store('profile', ['disk' => 'profile_files']);
+
+        // dd($r);
+        $data = [
+            'first_name' => $r->firstname,
+            'last_name' => $r->lastname,
+            'email' => $r->email,
+            'course_id' => $r->course,
+            'sub_course_id' => $r->sub_course,
+            'catchphrase' => $r->catchphrase,
+            'bio' => $r->bio,
+            'profile' => 'src/img/profile/' . $r->file->hashName()
+        ];
+        if($r->id){
+            $user = User::where('id', $r->id)->first();
+            $user->update($data);
+        };
+
+        return redirect()->route('admin.user.edit', $r->id);
+    }
+
+    /* ********************************** JOBS ********************************** */
+    // GET ALL JOBS
     public function getJobs()
     {
         $pending_jobs = Job::where('pending', true)->orderBy('deadline')->get();
@@ -88,6 +132,7 @@ class AdminController extends Controller
         ]);
     }
 
+    // ACCEPT JOB
     public function acceptJob(Job $job)
     {
         $data = [
@@ -101,6 +146,7 @@ class AdminController extends Controller
         return redirect()->route('admin.jobs');
     }
 
+    // MARK JOB AS COMPLETED
     public function completeJob(Job $job)
     {
         $data = [
@@ -114,9 +160,12 @@ class AdminController extends Controller
         return redirect()->route('admin.jobs');
     }
 
+    // DELETE JOB
     public function deleteJob(Job $job)
     {
         Job::find($job->id)->delete();
         return redirect()->route('admin.jobs');
     }
+
+
 }

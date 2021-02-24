@@ -18,6 +18,7 @@
                     <th>Email</th>
                     <th>Course</th>
                     <th>Major</th>
+                    <th>Profilephoto</th>
                     <th>Action</th>
                 </tr>
                 @foreach ( $requests as $request )
@@ -28,8 +29,9 @@
                         <td>{{ $request->email}}</td>
                         <td>{{ $request->course->title}}</td>
                         <td>{{ $request->sub_course ? $request->sub_course->title : ''}}</td>
+                        <td>{{ strlen($request->profile) > 1 ? 'true' : 'false'}} </td>
                         <td>
-                            <a href="{{route('portfolio.image.edit', $request->id)}}" type="button" class="btn btn-info">Edit</a>
+                            <a href="{{route('admin.user.edit', $request->id)}}" type="button" class="btn btn-info">Edit</a>
                             <a href="{{route('admin.toggle.account', $request->id )}}" type="button" class="btn btn-success">Activate</a>
                         </td>
                     </tr>

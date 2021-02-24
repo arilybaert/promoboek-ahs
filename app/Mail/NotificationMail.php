@@ -28,7 +28,7 @@ class NotificationMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Your account is active')
+        return $this->subject('Promoboek ahs')
 
                     ->view('emails.accountActivation');
     }

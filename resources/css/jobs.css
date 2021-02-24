@@ -1,0 +1,129 @@
+.o-jobcontainer {
+    padding-top: 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+.m-job-new-link {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--color-accent) !important;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+a.a-job-new-link:hover {
+    color: var(--color-accent) !important;
+    text-decoration: none;
+}
+a.a-job-new-link:link {
+    color: var(--color-accent) !important;
+}
+
+.o-job-card {
+    border: 3px solid var(--color-border);
+    border-radius: 1.4rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.a-job-title {
+    color: var(--color-accent);
+    font-size: 24pt;
+    font-weight: 600;
+}
+.a-job-hashtags {
+    color: var(--color-accent);
+}
+.a-job-description {
+    color: var(--color-portfolio-home-text);
+}
+.o-job-deadline {
+    display: flex;
+    align-items: center;
+}
+.a-job-deadline {
+    color: var(--color-accent);
+    font-weight: 800;
+}
+.o-job-contact {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+
+}
+.a-job-contact {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    width: 8rem;
+    border-radius: 6rem;
+    padding: 0.5rem;
+    display: block;
+    font-weight: 800;
+    text-align: center;
+}
+.o-job-date {
+    display: flex;
+    justify-content: end;
+    color: var(--color-portfolio-home-text);
+}
+.o-job-confirmation {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16pt;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+.a-job-confirmation {
+    padding: 3rem;
+}
+.m-job-confirmation-home-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-job-confirmation-home-link {
+    border: 6px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: 15pt;
+    font-weight: bold;
+    border-radius: 26px;
+    width: 170px;
+    text-align: center;
+    padding: 1px;
+    margin-bottom: 2rem;
+}
+a.a-job-confirmation-home-link:hover {
+    border: 6px solid var(--color-accent);
+    background-color: var(--color-white);
+    color: var(--color-accent);
+    text-decoration: none;
+}
+a.a-job-confirmation-home-link:link {
+    border: 6px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+.m-contact-icon {
+    height: 53px;
+    width: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+.a-contact-icon {
+    font-size:16pt;
+    color: var(--color-white);
+
+}
+.a-contact-info {
+    display: flex;
+    align-items: center;
+}
+.m-contact-icon__top {
+    margin-bottom: 1rem;
+}
