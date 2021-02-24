@@ -16,7 +16,7 @@
     ?>
             <a class="o-login" href="{{ route('admin')}} ">
                 <i class="fas fa-tachometer-alt a-dashboard-logo"></i>
-                <span>Dashboard</span>
+                <span>Dash</span>
             </a>
     <?php
         } else {
