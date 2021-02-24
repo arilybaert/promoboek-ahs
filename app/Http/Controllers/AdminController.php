@@ -16,21 +16,43 @@ class AdminController extends Controller
     public function index()
     {
         $requests = User::where('request', true)->orderBy('last_name')->get();
-        $cmo_students = User::where('role', 2)->where('course_id', 1)->where('request', '=', false)->orderBy('last_name')->get();
-        $avd_students = User::where('role', 2)->where('course_id', 2)->where('request', '=', false)->orderBy('last_name')->get();
-        $nmd_students = User::where('role', 2)->where('course_id', 3)->where('request', '=', false)->orderBy('last_name')->get();
-        $gmb_students = User::where('role', 2)->where('course_id', 4)->where('request', '=', false)->orderBy('last_name')->get();
         $teachers = User::where('role', 2)->where('course_id', 5)->where('request', '=', false)->orderBy('last_name')->get();
         $admins = User::where('role', 1)->orderBy('last_name')->get();
 
         return view('backoffice.admin', [
             'requests' => $requests,
-            'cmo_students' => $cmo_students,
-            'avd_students' => $avd_students,
-            'nmd_students' => $nmd_students,
-            'gmb_students' => $gmb_students,
             'teachers' => $teachers,
             'admins' => $admins
+        ]);
+    }
+
+    // GET CMO USERS
+    public function getCMO()
+    {
+        $cmo_students = User::where('role', 2)->where('course_id', 1)->where('request', '=', false)->orderBy('last_name')->get();
+        return view('backoffice.admin-cmo', [
+            'cmo_students' => $cmo_students
+        ]);
+    }
+    public function getAVD()
+    {
+        $avd_students = User::where('role', 2)->where('course_id', 2)->where('request', '=', false)->orderBy('last_name')->get();
+        return view('backoffice.admin-avd', [
+            'avd_students' => $avd_students,
+        ]);
+    }
+    public function getNMD()
+    {
+        $nmd_students = User::where('role', 2)->where('course_id', 3)->where('request', '=', false)->orderBy('last_name')->get();
+        return view('backoffice.admin-nmd', [
+            'nmd_students' => $nmd_students,
+        ]);
+    }
+    public function getGMB()
+    {
+        $gmb_students = User::where('role', 2)->where('course_id', 4)->where('request', '=', false)->orderBy('last_name')->get();
+        return view('backoffice.admin-gmb', [
+            'gmb_students' => $gmb_students,
         ]);
     }
 

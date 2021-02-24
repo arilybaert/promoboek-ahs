@@ -22,6 +22,8 @@
     --color-border: #FCE28A;
     --color-portfolio-home-text: #F38181;
     --box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.57);
+
+    --color-input: hsla(0, 47%, 95%, 25);
 }
 
 /* Background colors  */

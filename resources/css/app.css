@@ -16,6 +16,7 @@ body {
 @import "jobs-new.css";
 @import "header.css";
 @import "footer.css";
+@import "login.css";
 
 body {
     background-color: #fff;

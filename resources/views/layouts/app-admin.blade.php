@@ -44,6 +44,18 @@
                             <a class="nav-link" href="{{ route('admin') }}">Accounts</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('adminCMO') }}">CMO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('adminAVD') }}">AVD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('adminNMD') }}">NMD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('adminGMB') }}">GMB</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.jobs') }}">Jobs</a>
                         </li>
                         <!-- Authentication Links -->
