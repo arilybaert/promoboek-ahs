@@ -153,7 +153,31 @@ class AdminController extends Controller
             'completed_jobs' => $completed_jobs,
         ]);
     }
-
+    // GET JOB DETAILS
+    public function getJobsDetail(Job $job)
+    {
+        return view('backoffice.admin-job-detail', [
+            'job' => $job,
+        ]);
+    }
+    public function postJobsDetail(Request $job)
+    {
+        // dd($job);
+        $data = [
+            'title' => $job->title,
+            'tags' => $job->tags,
+            'content' => $job->content,
+            'first_name' => $job->first_name,
+            'last_name' => $job->last_name,
+            'email' => $job->email,
+            'deadline' => $job->deadline,
+        ];
+        $job = Job::where('id', $job->id)->first();
+        $job->update($data);
+        return view('backoffice.admin-job-detail', [
+            'job' => $job,
+        ]);
+    }
     // ACCEPT JOB
     public function acceptJob(Job $job)
     {
