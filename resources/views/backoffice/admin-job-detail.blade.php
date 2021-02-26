@@ -15,32 +15,32 @@
                 @csrf
                 <div class="col-md-6">
                   <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" name="title" value="{{ old('title', ($job ? $job->title : '')) }}">
+                  <input type="text" class="form-control" name="title" value="{{ old('title', ($job ? $job->title : '')) }}" required>
                   <input type="hidden" class="form-control" id="id" name="id" value="{{ $job ? $job->id : '' }}">
                 </div>
                 <div class="col-md-6">
                   <label for="tags" class="form-label">Tags</label>
-                  <input type="text" class="form-control" name="tags" value="{{ old('tags', ($job ? $job->tags : '')) }}">
+                  <input type="text" class="form-control" name="tags" value="{{ old('tags', ($job ? $job->tags : '')) }}" required>
                 </div>
                 <div class="col-md-6">
                     <label for="first_name" class="form-label">Firstname</label>
-                    <input type="text" class="form-control" name="first_name" value="{{ old('first_name', ($job ? $job->first_name : '')) }}">
+                    <input type="text" class="form-control" name="first_name" value="{{ old('first_name', ($job ? $job->first_name : '')) }}" required>
                 </div>
                 <div class="col-md-6">
                     <label for="last_name" class="form-label">Lastname</label>
-                    <input type="text" class="form-control" name="last_name" value="{{ old('last_name', ($job ? $job->last_name : '')) }}">
+                    <input type="text" class="form-control" name="last_name" value="{{ old('last_name', ($job ? $job->last_name : '')) }}" required>
                 </div>
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" value="{{ old('email', ($job ? $job->email : '')) }}">
+                    <input type="email" class="form-control" name="email" value="{{ old('email', ($job ? $job->email : '')) }}" required>
                 </div>
                 <div class="col-md-6">
                     <label for="deadline" class="form-label">Deadline</label>
-                    <input type="date" class="form-control" name="deadline" value="{{ old('deadline', ($job ? $job->deadline : '')) }}">
+                    <input type="date" class="form-control" name="deadline" value="{{ old('deadline', ($job ? $job->deadline : '')) }}" required>
                 </div>
                 <div class="col-md-12">
                   <label for="content" class="form-label @error('content') invalid @enderror">Description</label>
-                  <textarea type="text" class="form-control" name="content" style="height: 200px" >{{ old('description', ($job ? $job->content : '')) }}</textarea>
+                  <textarea type="text" class="form-control" name="content" style="height: 200px"  required>{{ old('description', ($job ? $job->content : '')) }}</textarea>
                 </div>
 
 
