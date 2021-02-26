@@ -14,7 +14,7 @@
         <div class="col-12">
             <table class="table table-striped">
                 <tr>
-                    <th>Lastname</th>
+                    <th>Lastnamef</th>
                     <th>Firstname</th>
                     <th>Email</th>
                     <th>Course</th>
@@ -30,7 +30,7 @@
                         <td>{{ $cmo_student->course->title}}</td>
                         <td>{{ $cmo_student->sub_course ? $cmo_student->sub_course->title : ''}}</td>
                         <td>
-                            <a href="{{route('portfolio.image.edit', $cmo_student->id)}}" type="button" class="btn btn-info">Edit</a>
+                            <a href="{{route('admin.user.edit', $cmo_student->id)}}" type="button" class="btn btn-info">Edit</a>
                             <a href="{{route('admin.toggle.account', $cmo_student->id )}}" type="button" class="btn btn-danger">Deactivate</a>
                         </td>
                     </tr>

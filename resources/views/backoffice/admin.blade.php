@@ -67,6 +67,7 @@
                         <td>{{ $admin->course->title}}</td>
                         <td>{{ $admin->sub_course ? $admin->sub_course->title : ''}}</td>
                         <td>
+                            <a href="{{route('admin.user.edit', $admin->id)}}" type="button" class="btn btn-info">Edit</a>
                             <a href="{{route('user.make', $admin->id)}}" type="button" class="btn btn-warning">Make user</a>
                             <a href="{{route('admin.toggle.account', $admin->id )}}" type="button" class="btn btn-danger">Deactivate</a>
                         </td>
@@ -104,7 +105,7 @@
                         <td>{{ $teacher->course->title}}</td>
                         <td>{{ $teacher->sub_course ? $teacher->sub_course->title : ''}}</td>
                         <td>
-                            <a href="{{route('portfolio.image.edit', $teacher->id)}}" type="button" class="btn btn-info">Edit</a>
+                            <a href="{{route('admin.user.edit', $teacher->id)}}" type="button" class="btn btn-info">Edit</a>
                             <a href="{{route('admin.make', $teacher->id)}}" type="button" class="btn btn-warning">Make admin</a>
                             <a href="{{route('admin.toggle.account', $teacher->id )}}" type="button" class="btn btn-danger">Delete</a>
                         </td>

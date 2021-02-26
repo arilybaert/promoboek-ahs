@@ -30,8 +30,8 @@
                         <td>{{ $gmb_student->course->title}}</td>
                         <td>{{ $gmb_student->sub_course ? $gmb_student->sub_course->title : ''}}</td>
                         <td>
-                            <a href="{{route('portfolio.image.edit', $gmb_student->id)}}" type="button" class="btn btn-info">Edit</a>
-                            <a href="{{route('admin.toggle.account', $gmb_student->id )}}" type="button" class="btn btn-danger">Delete</a>
+                            <a href="{{route('admin.user.edit', $gmb_student->id)}}" type="button" class="btn btn-info">Edit</a>
+                            <a href="{{route('admin.toggle.account', $gmb_student->id )}}" type="button" class="btn btn-danger">Deactivate</a>
                         </td>
                     </tr>
                 @endforeach
