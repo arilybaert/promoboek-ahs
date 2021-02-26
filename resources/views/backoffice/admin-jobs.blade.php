@@ -29,6 +29,7 @@
                         <td>{{ $pending_job->first_name . ' ' . $pending_job->last_name}}</td>
                         <td>{{ $pending_job->deadline}}</td>
                         <td>
+                            <a href="{{route('admin.jobs.detail', $pending_job->id)}}" type="button" class="btn btn-secondary">Details</a>
                             <a href="{{route('admin.jobs.accept', $pending_job->id)}}" type="button" class="btn btn-success">Accept</a>
                             <a href="{{route('admin.jobs.delete', $pending_job->id )}}" type="button" class="btn btn-danger">Delete</a>
                         </td>

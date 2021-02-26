@@ -59,6 +59,8 @@ Route::get('/admin/toggle-account/{user}', [App\Http\Controllers\AdminController
 
 // ADMIN JOBS
 Route::get('/admin/jobs', [App\Http\Controllers\AdminController::class, 'getJobs'])->name('admin.jobs')->middleware('admin');
+Route::get('/admin/jobs/{job}', [App\Http\Controllers\AdminController::class, 'getJobsDetail'])->name('admin.jobs.detail')->middleware('admin');
+Route::post('/admin/jobs/{job}', [App\Http\Controllers\AdminController::class, 'postJobsDetail'])->name('admin.jobs.detail.save')->middleware('admin');
 Route::get('/admin/jobs/accept/{job}', [App\Http\Controllers\AdminController::class, 'acceptJob'])->name('admin.jobs.accept')->middleware('admin');
 Route::get('/admin/jobs/complete/{job}', [App\Http\Controllers\AdminController::class, 'completeJob'])->name('admin.jobs.complete')->middleware('admin');
 Route::get('/admin/jobs/delete/{job}', [App\Http\Controllers\AdminController::class, 'deleteJob'])->name('admin.jobs.delete')->middleware('admin');
