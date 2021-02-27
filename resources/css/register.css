@@ -1,16 +1,13 @@
-.o-login-menu {
+.o-register {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin: 2rem 0rem;
     border-radius: 15px;
     border: 3px solid var(--color-border);
     padding: 3rem;
 }
-.m-login-menu {
-    width: 70vw;
-}
-.a-login-label {
+.a-register-label {
     text-align: right;
     font-weight: bold;
     color: var(--color-accent);
@@ -18,7 +15,10 @@
     justify-content: flex-end;
     align-items: center;
 }
-.a-login-input {
+.o-form-group {
+    margin-bottom: 0.5rem;
+}
+.a-register-input {
     background-color: var(--color-input);
     border: none;
     border-radius: 9rem;
@@ -26,9 +26,8 @@
     color: var(--color-accent);
     width: 250px;
     height: 40px;
-    margin-bottom: 1rem;
 }
-.a-login-button {
+.a-register-button {
     border: 3px solid var(--color-white);
     background-color: var(--color-accent);
     color: var(--color-white);
@@ -37,12 +36,8 @@
     height: 40px;
     border-radius: 25px;
 }
-.a-login-button:hover {
+.a-register-button:hover {
     border: 3px solid var(--color-accent);
     background-color: var(--color-white);
     color: var(--color-accent);
-}
-.a-remember-me {
-    color: var(--color-accent);
-    padding-left: 0.5rem;
 }

@@ -18,6 +18,7 @@ body {
 @import "footer.css";
 @import "login.css";
 @import "pending.css";
+@import "register.css";
 
 body {
     background-color: #fff;
