@@ -10871,7 +10871,7 @@ a.a-link:hover {
     align-items: center;
 }
 .a-login-input {
-    background-color: hsla(0, 47%, 95%, 25);
+    background-color: var(--color-input);
     border: none;
     border-radius: 9rem;
     padding-left: 1rem;
@@ -10934,6 +10934,50 @@ a.a-pending-home-button:hover {
     background-color: var(--color-white);
     color: var(--color-accent);
     text-decoration: none;
+}
+
+.o-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0rem;
+    border-radius: 15px;
+    border: 3px solid var(--color-border);
+    padding: 3rem;
+}
+.a-register-label {
+    text-align: right;
+    font-weight: bold;
+    color: var(--color-accent);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.o-form-group {
+    margin-bottom: 0.5rem;
+}
+.a-register-input {
+    background-color: var(--color-input);
+    border: none;
+    border-radius: 9rem;
+    padding-left: 1rem;
+    color: var(--color-accent);
+    width: 250px;
+    height: 40px;
+}
+.a-register-button {
+    border: 3px solid var(--color-white);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-weight: bold;
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+}
+.a-register-button:hover {
+    border: 3px solid var(--color-accent);
+    background-color: var(--color-white);
+    color: var(--color-accent);
 }
 
 body {

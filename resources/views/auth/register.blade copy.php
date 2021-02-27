@@ -1,17 +1,21 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
-    <div class="row o-register">
-        <div class="col-8">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Register') }}</div>
+
+                <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="row o-form-group">
-                            <label for="first_name" class="a-register-label col-12 col-md-4">{{ __('Firstname') }}</label>
+                        <div class="form-group row">
+                            <label for="first_name" class="col-md-4 col-form-label text-md-right">{{ __('Firstname') }}</label>
 
-                            <div class="col-12 col-md-6">
-                                <input id="first_name" type="text" class="a-register-input @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
+                            <div class="col-md-6">
+                                <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
 
                                 @error('first_name')
                                     <span class="invalid-feedback" role="alert">
@@ -22,11 +26,11 @@
 
                         </div>
 
-                        <div class="row o-form-group">
-                            <label for="last_name" class="a-register-label col-12 col-md-4 ">{{ __('Lastname') }}</label>
+                        <div class="form-group row">
+                            <label for="last_name" class="col-md-4 col-form-label text-md-right">{{ __('Lastname') }}</label>
 
-                            <div class="col-12 col-md-6">
-                                <input id="last_name" type="text" class="a-register-input @error('name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+                            <div class="col-md-6">
+                                <input id="last_name" type="text" class="form-control @error('name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
 
                                 @error('last_name')
                                     <span class="invalid-feedback" role="alert">
@@ -37,11 +41,11 @@
 
                         </div>
 
-                        <div class="row o-form-group">
-                            <label for="email" class="a-register-label col-12 col-md-4 ">{{ __('E-Mail Address') }}</label>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="a-register-input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -51,12 +55,12 @@
                             </div>
                         </div>
 
-                        <div class="row o-form-group">
-                            <label for="course" class="a-register-label col-12 col-md-4">{{ __('Course') }}</label>
+                        <div class="form-group row">
+                            <label for="course" class="col-md-4 col-form-label text-md-right">{{ __('Course') }}</label>
 
-                            <div class="col-12 col-md-6">
+                            <div class="col-md-6">
 
-                                <select id="course"  name="course" class=" @error('course') is-invalid @enderror" aria-label="Default select example" required>
+                                <select id="course"  name="course" class="form-select @error('course') is-invalid @enderror" aria-label="Default select example" required>
                                     <option selected disabled>Open this select menu</option>
                                     <option value="1">CMO</option>
                                     <option value="2">AVD</option>
@@ -73,12 +77,12 @@
                             </div>
                         </div>
 
-                        <div class="row o-form-group">
-                            <label for="sub_course" class="a-register-label col-12 col-md-4">{{ __('Major') }}</label>
+                        <div class="form-group row">
+                            <label for="sub_course" class="col-md-4 col-form-label text-md-right">{{ __('Major') }}</label>
 
-                            <div class="col-12 col-md-6">
+                            <div class="col-md-6">
 
-                                <select id="sub_course"  name="sub_course" class="@error('sub_course') is-invalid @enderror" aria-label="Default select example" required>
+                                <select id="sub_course"  name="sub_course" class="form-select @error('sub_course') is-invalid @enderror" aria-label="Default select example" required>
                                     <option selected disabled>Open this select menu</option>
                                     <option>None</option>
                                     <option value="1">CMO: Grafic Design</option>
@@ -95,11 +99,11 @@
                             </div>
                         </div>
 
-                        <div class="row o-form-group">
-                            <label for="password" class="a-register-label col-12 col-md-4 ">{{ __('Password') }}</label>
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-12 col-md-6">
-                                <input id="password" type="password" class="a-register-input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -109,17 +113,17 @@
                             </div>
                         </div>
 
-                        <div class="row o-form-group">
-                            <label for="password-confirm" class="a-register-label col-12 col-md-4">{{ __('Confirm Password') }}</label>
+                        <div class="form-group row">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-12 col-md-6">
-                                <input id="password-confirm" type="password" class="a-register-input " name="password_confirmation" required autocomplete="new-password">
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="a-register-button">
+                                <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>
