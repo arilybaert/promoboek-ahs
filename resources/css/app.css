@@ -19,6 +19,7 @@ body {
 @import "login.css";
 @import "pending.css";
 @import "register.css";
+@import "avd-home.css";
 
 body {
     background-color: #fff;

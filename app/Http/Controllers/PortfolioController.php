@@ -80,7 +80,9 @@ class PortfolioController extends Controller
 
     public function getAVD()
     {
+        return view('pages.avd-home', [
 
+        ]);
     }
 
     public function getNMD()
