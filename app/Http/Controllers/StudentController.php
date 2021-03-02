@@ -269,7 +269,7 @@ class StudentController extends Controller
         ]);
     }
     // update porfolio video
-    public function postUserVideo(Image $image, Request $r)
+    public function postUserVideo(Video $video, Request $r)
     {
         $id = Auth::user()->id;
 
@@ -302,7 +302,7 @@ class StudentController extends Controller
             $r->validate($validationRules);
 
         /*
-        Turn current image thumbnail off
+        Turn current video thumbnail off
         */
         }else {
 
@@ -319,6 +319,14 @@ class StudentController extends Controller
             $video = Video::where('id', $r->id)->first();
             $video->update($data);
         }
+
+        return redirect()->route('student');
+    }
+
+    // delete video
+    public function videoDelete(Request $r) {
+
+        Video::find($r->id)->delete();
 
         return redirect()->route('student');
     }

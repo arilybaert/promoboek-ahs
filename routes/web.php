@@ -72,15 +72,21 @@ Route::post('/admin/user/edit/save', [App\Http\Controllers\AdminController::clas
 // STUDENT BACKOFFICE
 Route::get('/student', [App\Http\Controllers\StudentController::class, 'index'])->name('student')->middleware('student');
 Route::post('/student/edit/{user}', [App\Http\Controllers\StudentController::class, 'postUser'])->name('student.edit')->middleware('student');
+
 Route::get('/student/edit/image/{image}', [App\Http\Controllers\StudentController::class, 'getUserImage'])->name('portfolio.image')->middleware('student');
 Route::get('/student/edit/video/{video}', [App\Http\Controllers\StudentController::class, 'getUserVideo'])->name('portfolio.video')->middleware('student');
+
 Route::post('/student/edit/image/{image}', [App\Http\Controllers\StudentController::class, 'postUserImage'])->name('portfolio.image.edit')->middleware('student');
 Route::post('/student/edit/video/{video}', [App\Http\Controllers\StudentController::class, 'postUserVideo'])->name('portfolio.video.edit')->middleware('student');
+
 Route::get('/student/image/new', [App\Http\Controllers\StudentController::class, 'createUserImage'])->name('portfolio.image.new')->middleware('student');
-Route::post('/student/image/new', [App\Http\Controllers\StudentController::class, 'postUserNewImage'])->name('portfolio.image.create')->middleware('student');
 Route::get('/student/video/new', [App\Http\Controllers\StudentController::class, 'createUserVideo'])->name('portfolio.video.new')->middleware('student');
+
+Route::post('/student/image/new', [App\Http\Controllers\StudentController::class, 'postUserNewImage'])->name('portfolio.image.create')->middleware('student');
 Route::post('/student/video/new', [App\Http\Controllers\StudentController::class, 'postUserNewVideo'])->name('portfolio.video.create')->middleware('student');
+
 Route::get('/student/image/delete/{id}', [App\Http\Controllers\StudentController::class, 'imageDelete'])->name('portfolio.image.delete')->middleware('student');
+Route::get('/student/video/delete/{id}', [App\Http\Controllers\StudentController::class, 'videoDelete'])->name('portfolio.video.delete')->middleware('student');
 
 // ACCOUNT VERIFICATION
 Route::get('/student/pending', [App\Http\Controllers\StudentController::class, 'getPendingVerification'])->name('pending-verification');
