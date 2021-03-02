@@ -21,20 +21,20 @@ Route::redirect('/', '/home');
 // FREE ROUTES
 Route::get('/home', [HomeController::class, 'getIndex'])->name('home');
 
+// course home
 Route::get('/portfolio-cmo', [PortfolioController::class, 'getCMO'])->name('portfolio-cmo');
 Route::get('/portfolio-cmo/graphic-design', [PortfolioController::class, 'getCMOGD'])->name('portfolio-cmo-gd');
 Route::get('/portfolio-cmo/photo-design', [PortfolioController::class, 'getCMOPD'])->name('portfolio-cmo-pd');
-
 Route::get('/portfolio-avd', [PortfolioController::class, 'getAVD'])->name('portfolio-avd');
-
 Route::get('/portfolio-nmd', [PortfolioController::class, 'getNMD'])->name('portfolio-nmd');
-
 Route::get('/portfolio-gmb', [PortfolioController::class, 'getGMB'])->name('portfolio-gmb');
 Route::get('/portfolio-gmb/printmedia', [PortfolioController::class, 'getGMBPM'])->name('portfolio-gmb-pm');
 Route::get('/portfolio-gmb/crossmedia', [PortfolioController::class, 'getGMBCM'])->name('portfolio-gmb-cm');
 
+// student detail
 Route::get('/portfolio-cmo/{user}', [PortfolioController::class, 'getCMODetail'])->name('portfolio-cmo-detail');
 Route::get('/portfolio-nmd/{user}', [PortfolioController::class, 'getNMDDetail'])->name('portfolio-nmd-detail');
+Route::get('/portfolio-avd/{user}', [PortfolioController::class, 'getAVDDetail'])->name('portfolio-avd-detail');
 
 Route::get('/yearbook/{id?}', [YearbookController::class , 'getIndex'])->name('yearbook');
 Route::get('/jobs', [JobController::class, 'getIndex'])->name('jobs');
@@ -73,9 +73,13 @@ Route::post('/admin/user/edit/save', [App\Http\Controllers\AdminController::clas
 Route::get('/student', [App\Http\Controllers\StudentController::class, 'index'])->name('student')->middleware('student');
 Route::post('/student/edit/{user}', [App\Http\Controllers\StudentController::class, 'postUser'])->name('student.edit')->middleware('student');
 Route::get('/student/edit/image/{image}', [App\Http\Controllers\StudentController::class, 'getUserImage'])->name('portfolio.image')->middleware('student');
+Route::get('/student/edit/video/{video}', [App\Http\Controllers\StudentController::class, 'getUserVideo'])->name('portfolio.video')->middleware('student');
 Route::post('/student/edit/image/{image}', [App\Http\Controllers\StudentController::class, 'postUserImage'])->name('portfolio.image.edit')->middleware('student');
+Route::post('/student/edit/video/{video}', [App\Http\Controllers\StudentController::class, 'postUserVideo'])->name('portfolio.video.edit')->middleware('student');
 Route::get('/student/image/new', [App\Http\Controllers\StudentController::class, 'createUserImage'])->name('portfolio.image.new')->middleware('student');
 Route::post('/student/image/new', [App\Http\Controllers\StudentController::class, 'postUserNewImage'])->name('portfolio.image.create')->middleware('student');
+Route::get('/student/video/new', [App\Http\Controllers\StudentController::class, 'createUserVideo'])->name('portfolio.video.new')->middleware('student');
+Route::post('/student/video/new', [App\Http\Controllers\StudentController::class, 'postUserNewVideo'])->name('portfolio.video.create')->middleware('student');
 Route::get('/student/image/delete/{id}', [App\Http\Controllers\StudentController::class, 'imageDelete'])->name('portfolio.image.delete')->middleware('student');
 
 // ACCOUNT VERIFICATION
