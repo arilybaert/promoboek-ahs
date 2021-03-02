@@ -50,7 +50,7 @@
             </h1>
         </div>
         <div class="col-1">
-            <a href="{{route('portfolio.image.new')}}" type="button" class="btn btn-warning">New</a>
+                <a href="{{$user->course_id === 2 ? route('portfolio.video.new') : route('portfolio.image.new')}}" type="button" class="btn btn-warning">New</a>
         </div>
     </div>
 
@@ -58,26 +58,26 @@
         <div class="col-12">
             <table class="table table-striped">
                 <tr>
-                    <th>Image</th>
+                    <th>File Thumbnail</th>
                     <th>Title</th>
                     <th>Description</th>
                     <th>Thumbnail</th>
                     <th>Tags</th>
                     <th>Action</th>
                 </tr>
-                @foreach ( $images as $image )
+                @foreach ( $files as $file )
 
                     <tr>
                         <td>
-                            <img src="{{asset($image->url)}}" alt="" style="height: 100px; width: 100px; object-fit:cover;">
+                            <img src="{{asset($file->thumbnail_image ?? $file->url)}}" alt="" style="height: 100px; width: 100px; object-fit:cover;">
                         </td>
-                        <td>{{ $image->title}}</td>
-                        <td>{{ $image->content}}</td>
-                        <td>{{ $image->thumbnail}}</td>
-                        <td>{{ $image->tags}}</td>
+                        <td>{{ $file->title}}</td>
+                        <td>{{ $file->content}}</td>
+                        <td>{{ $file->thumbnail}}</td>
+                        <td>{{ $file->tags}}</td>
                         <td>
-                            <a href="{{route('portfolio.image.edit', $image->id)}}" type="button" class="btn btn-info">Edit</a>
-                            <a href="{{route('portfolio.image.delete', $image->id )}}" type="button" class="btn btn-danger">Delete</a>
+                            <a href="{{$user->course_id === 2 ? route('portfolio.video', $file->id) : route('portfolio.image', $file->id)}}" type="button" class="btn btn-info">Edit</a>
+                            <a href="{{route('portfolio.image.delete', $file->id )}}" type="button" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach

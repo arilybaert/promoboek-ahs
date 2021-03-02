@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Image;
+use App\Models\Video;
 use App\Models\User;
 class PortfolioController extends Controller
 {
@@ -80,8 +81,17 @@ class PortfolioController extends Controller
 
     public function getAVD()
     {
-        return view('pages.avd-home', [
+        // Show thumbail picture for each student
 
+        $students = User::where('course_id', '2')
+        ->join('videos', function ($join) {
+            $join->on('users.id', '=', 'videos.student_id')
+            ->where('videos.thumbnail', '=', 1);
+        })->get();
+
+        return view('pages.avd-home', [
+            'students' => $students,
+            'sub_header' => 'Audiovisual Design',
         ]);
     }
 
@@ -110,6 +120,18 @@ class PortfolioController extends Controller
         return view('pages.nmd-detail', [
             'sub_header' => $user->first_name . ' <br> ' . $user->last_name,
             'images' => $images,
+            'student' => $user
+        ]);
+    }
+    public function getAVDDetail(User $user)
+    {
+        $videos = Video::where('student_id', $user->id)->get();
+
+        // echo '<pre>' . var_export($images, true) . '</pre>';
+
+        return view('pages.avd-detail', [
+            'sub_header' => $user->first_name . ' <br> ' . $user->last_name,
+            'videos' => $videos,
             'student' => $user
         ]);
     }

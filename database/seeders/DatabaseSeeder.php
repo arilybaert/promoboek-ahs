@@ -6,6 +6,8 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Course;
 use App\Models\Job;
+use App\Models\Video;
+use App\Models\Image;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,27 +18,34 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // jobs
+        /*
+        ** jobs
+        */
+
+        /*
         for($i = 1; $i < 8; $i++) {
             $jobs = Job::factory()->create();
         }
+        */
 
-    // users
+        // users
 
-        // $admin = User::factory()->create([
-        //     'first_name' => 'Dieter',
-        //     'last_name' => 'Wullaert',
-        //     'email' => 'dwullaert@ahs.be',
-        //     'password' => bcrypt('secret'),
-        //     'role' => 2,
-        //     'course_id' => 5,
-        // ]);
-        // $student = User::factory()->create([
-        //     'name' => 'Ari Lybaert',
-        //     'email' => 'arilybaert@ahs.be',
-        //     'password' => bcrypt('secret'),
-        //     'role' => 2
-        // ]);
+        /*
+        $admin = User::factory()->create([
+            'first_name' => 'Dieter',
+            'last_name' => 'Wullaert',
+            'email' => 'dwullaert@ahs.be',
+            'password' => bcrypt('secret'),
+            'role' => 2,
+            'course_id' => 5,
+        ]);
+        $student = User::factory()->create([
+            'name' => 'Ari Lybaert',
+            'email' => 'arilybaert@ahs.be',
+            'password' => bcrypt('secret'),
+            'role' => 2
+        ]);
+        */
 
         /*
         ** COURSE
@@ -147,7 +156,28 @@ class DatabaseSeeder extends Seeder
                 'role' => 2
             ]);
         }
-*/
+
+        */
+        // AVD
+        for($i = 46; $i < 56; $i++) {
+            $students = User::factory()->create([
+                'course_id' => '2',
+                'password' => bcrypt('secret'),
+                'role' => 2
+            ]);
+        }
+        /*
+        ** VIDEO
+        */
+        for($i = 46; $i < 56; $i++) {
+            $videos = Video::factory()->create([
+                'student_id' => $i,
+            ]);
+            $videos = Video::factory()->create([
+                'student_id' => $i,
+                'thumbnail' => true
+            ]);
+        }
 
         /*
         ** IMAGE

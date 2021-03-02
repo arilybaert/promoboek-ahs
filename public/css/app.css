@@ -10224,6 +10224,7 @@ a.a-sub-course-title:hover {
 
 /* modal */
 .a-modal {
+    z-index: 3000;
     position: fixed;
     left: 0;
     top: 0;

@@ -59,6 +59,14 @@ return [
             'driver' => 'local',
             'root'   => public_path() . '/src/img',
         ],
+        'portfolio_thumbnail_files' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/src/img/thumbnails',
+        ],
+        'portfolio_video_files' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/src/video/portfolio',
+        ],
 
     ],
 
