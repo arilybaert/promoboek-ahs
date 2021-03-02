@@ -77,7 +77,7 @@
                         <td>{{ $file->tags}}</td>
                         <td>
                             <a href="{{$user->course_id === 2 ? route('portfolio.video', $file->id) : route('portfolio.image', $file->id)}}" type="button" class="btn btn-info">Edit</a>
-                            <a href="{{route('portfolio.image.delete', $file->id )}}" type="button" class="btn btn-danger">Delete</a>
+                            <a href="{{$user->course_id === 2 ? route('portfolio.video.delete', $file->id ) :route('portfolio.image.delete', $file->id )}}" type="button" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
