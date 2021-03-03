@@ -1,18 +1,7 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
-    <!-- Test comment Jesse Vandermeerch -->
-    <div class="o-sub-courses row">
-        {{-- @foreach ($sub_courses as $sub_course)
-            <a href="{{ url('portfolio-cmo/'. $sub_course->title_short .'/') }}" class="col-5 col-md-3 a-sub-course-title">{{$sub_course->title}}</a>
-        @endforeach --}}
-        <a href="{{ route('portfolio-gmb-pm') }}" class="col-5 col-md-3 a-sub-course-title">Printmedia</a>
-        <a href="{{ route('portfolio-gmb-cm') }}" class="col-5 col-md-3 a-sub-course-title">Crossmedia</a>
 
-
-    </div>
-</div>
 <div class="o-cmo-portfolio o-cmo-container">
 
         @foreach ( $students as $student)
@@ -60,7 +49,7 @@
 
                             <div class="col-2 m-cmo-portfolioBtn">
                                 <i class="fas fa-times close"></i>
-                                <a class="a-cmo-portfolioBtn" href="{{route('portfolio-cmo-detail', $student->id)}}">
+                                <a class="a-cmo-portfolioBtn" href="{{route('portfolio-cmo-detail', $student->student_id)}}">
                                     <span>portfolio</span>
                                 </a>
                             </div>

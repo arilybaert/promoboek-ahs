@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/1f9fa605a9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+{{--
     <?php
         if (Auth::check()) {
     ?>
@@ -27,27 +27,65 @@
             </a>
     <?php
         }
-    ?>
-<header class="o-header container">
+    ?> --}}
 
-    <div class="m-headerTop row">
-        @if (\Route::current()->getName() == 'home')
-            <a href="{{ route('yearbook')}}" class="a-link order-2 order-md-1 col-sm-3 col-md-3">Yearbook</a>
-            <a href="{{ route('jobs')}}" class="a-link order-3  offset-sm-1 offset-md-0 order-md-3 col-sm-3  col-md-3">Jobs</a>
-        @endif
+<header class="o-header-alt">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 m-header-alt">
+                <img src="{{asset('/src/img/logo/promoboek-ahs-2.png') }}" alt="GDM" title="GDM" class="a-site-logo-alt ">
+                <?php
+            $header = \Route::current()->getName();
+            ?>
+            <p class="a-course-title-alt">
+                {{-- {{str_replace(' ',"\n",$sub_header ?? $header)}} --}}
+                <?php echo preg_replace('/ /','<br>',$sub_header);?>
+            </p>
+        </div>
 
-        <div class="order-1 order-md-2 col-sm-12 col-md-6 m-site-logo">
-            <img src="{{asset('/src/img/logo/promoboek-ahs-2.png') }}" alt="GDM" title="GDM" class="a-site-logo ">
+        <div class="col-12 col-sm-12 col-md-5 col-xl-5 offset-md-1 m-filtert-links">
+            @switch(\Route::current()->getName())
+                @case('portfolio-cmo')
+                    <a href="{{ route('portfolio-cmo-gd') }}" class="a-sub-course-link">Graphic Design</a>
+                    <a href="{{ route('portfolio-cmo-pd') }}" class="a-sub-course-link">Photo Design</a>
+                @break
+                @case('portfolio-cmo-gd')
+                    <a href="{{ route('portfolio-cmo-gd') }}" class="a-sub-course-link">Graphic Design</a>
+                    <a href="{{ route('portfolio-cmo-pd') }}" class="a-sub-course-link">Photo Design</a>
+                @break
+                @case('portfolio-cmo-pd')
+                    <a href="{{ route('portfolio-cmo-gd') }}" class="a-sub-course-link">Graphic Design</a>
+                    <a href="{{ route('portfolio-cmo-pd') }}" class="a-sub-course-link">Photo Design</a>
+                @break
+                @case('portfolio-avd')
+
+                    @break
+                @case('portfolio-gmb')
+                    <a href="{{ route('portfolio-gmb-pm') }}" class="a-sub-course-link">Printmedia</a>
+                    <a href="{{ route('portfolio-gmb-cm') }}" class="a-sub-course-link">Crossmedia</a>
+                @break
+                @case('portfolio-gmb-pm')
+                    <a href="{{ route('portfolio-gmb-pm') }}" class="a-sub-course-link">Printmedia</a>
+                    <a href="{{ route('portfolio-gmb-cm') }}" class="a-sub-course-link">Crossmedia</a>
+                @break
+                @case('portfolio-gmb-cm')
+                    <a href="{{ route('portfolio-gmb-pm') }}" class="a-sub-course-link">Printmedia</a>
+                    <a href="{{ route('portfolio-gmb-cm') }}" class="a-sub-course-link">Crossmedia</a>
+                @break
+                @case('yearbook')
+                    <div class="o-yearbook-filter">
+                        @foreach ($courses as $course)
+                            @if($course->title_short !== 'teacher')
+                                <a href="{{ url('yearbook/'. $course->title_short .'/') }}" class="a-yearbook-filter a-yearbook-link-{{$course->title_short}}">{{strtoupper($course->title_short)}}</a>
+                            @endif
+                        @endforeach
+
+                    </div>
+                @break
+                @default
+
+            @endswitch
+
         </div>
     </div>
-
-    <div class="m-headerBottom row">
-        <span class=" a-line a-lineLeft col-2 col-sm-3 col-md-4"></span>
-        <?php
-            $header = \Route::current()->getName();
-        ?>
-        <span class="a-subHeader col-8 col-sm-6 col-md-4">{{$sub_header ?? $header}}</span>
-        <span class="a-line a-lineRight col-2 col-sm-3 col-md-4"></span>
-    </div>
-
 </header>
+<div class="a-border-header-bottom"></div>

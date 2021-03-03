@@ -11,11 +11,12 @@
     margin-bottom: 1rem;
 }
 a.a-job-new-link:hover {
-    color: var(--color-accent) !important;
+    color: var(--color-accent);
     text-decoration: none;
 }
+a.a-job-new-link,
 a.a-job-new-link:link {
-    color: var(--color-accent) !important;
+    color: var(--color-accent);
 }
 
 .o-job-card {
