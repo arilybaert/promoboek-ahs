@@ -1,9 +1,13 @@
-.cmo-detail-header {
-    display: flex;
+.o-cmo-detail-header {
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
+    align-items: center; */
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 90%;
+    max-width: 800px;
+
 }
 .o-cmo-detail-main {
     margin: 0 auto;
@@ -30,16 +34,17 @@
     max-width: 800px;
     color: var(--color-accent);
     font-size: 15pt;
+    font-weight: 100;
     margin: 2rem 0;
-    margin-top: 3rem;
+    margin-top: 0.5rem;
 }
 .m-cmo-detail-container {
     position: relative;
-
-}
-.a-cmo-detail-profile {
     width: 220px;
     height: 220px;
+}
+.a-cmo-detail-profile {
+    width: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -67,3 +72,11 @@
     border-radius: 0.5rem;
 }
 
+.a-student-detail-page {
+    font-size: 19pt;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+.m-student-detail-info {
+    margin-left: 1rem;
+}

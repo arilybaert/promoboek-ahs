@@ -1,18 +1,7 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
-    <!-- Test comment Jesse Vandermeerch -->
-    <div class="o-sub-courses row">
-        {{-- @foreach ($sub_courses as $sub_course)
-            <a href="{{ url('portfolio-cmo/'. $sub_course->title_short .'/') }}" class="col-5 col-md-3 a-sub-course-title">{{$sub_course->title}}</a>
-        @endforeach --}}
-        <a href="{{ route('portfolio-cmo-gd') }}" class="col-5 col-md-3 a-sub-course-title">Graphic Design</a>
-        <a href="{{ route('portfolio-cmo-pd') }}" class="col-5 col-md-3 a-sub-course-title">Photo Design</a>
 
-
-    </div>
-</div>
 <div class="o-cmo-portfolio o-cmo-container">
 
         @foreach ( $students as $student)

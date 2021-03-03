@@ -10375,12 +10375,16 @@ a.o-nmd-card:hover {
 }
 }
 
-.cmo-detail-header {
-    display: flex;
+.o-cmo-detail-header {
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
+    align-items: center; */
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 90%;
+    max-width: 800px;
+
 }
 .o-cmo-detail-main {
     margin: 0 auto;
@@ -10407,16 +10411,17 @@ a.o-nmd-card:hover {
     max-width: 800px;
     color: var(--color-accent);
     font-size: 15pt;
+    font-weight: 100;
     margin: 2rem 0;
-    margin-top: 3rem;
+    margin-top: 0.5rem;
 }
 .m-cmo-detail-container {
     position: relative;
-
-}
-.a-cmo-detail-profile {
     width: 220px;
     height: 220px;
+}
+.a-cmo-detail-profile {
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 50%;
@@ -10446,6 +10451,14 @@ a.o-nmd-card:hover {
     border-radius: 0.5rem;
 }
 
+.a-student-detail-page {
+    font-size: 19pt;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+.m-student-detail-info {
+    margin-left: 1rem;
+}
 
 .a-page-title {
     text-align: center;
@@ -10458,7 +10471,6 @@ a.o-nmd-card:hover {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    justify-content: space-between;
     width: 70vw;
 }
 .o-yearbook-students::after {
@@ -10466,9 +10478,9 @@ a.o-nmd-card:hover {
 }
 
 .o-studentcards {
-    /* flex: 10% 0 0; */
+    width: 95%;
+
     padding: 0.5rem;
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10511,6 +10523,18 @@ a.o-nmd-card:hover {
     bottom: 0;
     right: 0;
 }
+.a-yearbook-student-major-cmo {
+    background-color: var(--color-cmo);
+}
+.a-yearbook-student-major-avd {
+    background-color: var(--color-avd);
+}
+.a-yearbook-student-major-nmd {
+    background-color: var(--color-nmd);
+}
+.a-yearbook-student-major-gmb {
+    background-color: var(--color-gmb);
+}
 .a-yearbook-student-name {
     color: #C4314B;
     font-weight: 600;
@@ -10532,11 +10556,12 @@ a.o-nmd-card:hover {
     margin-bottom: 1rem;
 }
 a.a-job-new-link:hover {
-    color: var(--color-accent) !important;
+    color: var(--color-accent);
     text-decoration: none;
 }
+a.a-job-new-link,
 a.a-job-new-link:link {
-    color: var(--color-accent) !important;
+    color: var(--color-accent);
 }
 
 .o-job-card {
@@ -10705,6 +10730,118 @@ a.a-job-confirmation-home-link:link {
     margin-bottom: 1rem;
 }
 
+.o-header-alt {
+    width: 80%;
+    max-width: 840px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    /* border-bottom: 2px solid var(--color-accent); */
+}
+.a-border-header-bottom {
+    width: 85%;
+    max-width: 860px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: var(--color-accent);
+    border-radius: 25px;
+}
+.a-site-logo-alt {
+    height: 73px;
+    width: auto;
+}
+.m-header-alt {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+
+}
+.a-course-title-alt {
+    font-size: 16pt;
+    color: var(--color-accent);
+    font-weight: bold;
+    margin-left: 1rem;
+}
+.m-filtert-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.m-filtert-links a:not(:first-child) {
+    margin-left: 0.5rem;
+}
+.a-sub-course-link,
+a.a-sub-course-link:link {
+    width: 140px;
+    text-align: center;
+    padding: 0.5rem 0rem;
+    border-radius: 26px;
+    font-weight: bold;
+    border: 2px solid var(--color-accent);
+    background-color: white;
+    color: var(--color-accent);
+    text-decoration: none;
+}
+a.a-sub-course-link:hover {
+    border: 2px solid white;
+    background-color: var(--color-accent);
+    color: white;
+    text-decoration: none;
+}
+.a-yearbook-filter {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 10pt;
+}
+/* link normal  */
+a.a-yearbook-link-cmo,
+a.a-yearbook-link-cmo:link {
+    border: 4px solid var(--color-cmo);
+    color: var(--color-cmo);
+}
+a.a-yearbook-link-avd,
+a.a-yearbook-link-avd:link {
+    border: 4px solid var(--color-avd);
+    color: var(--color-avd);
+}
+a.a-yearbook-link-nmd,
+a.a-yearbook-link-:link {
+    border: 4px solid var(--color-nmd);
+    color: var(--color-nmd);
+}
+a.a-yearbook-link-gmb,
+a.a-yearbook-link-gmb:link {
+    border: 4px solid var(--color-gmb);
+    color: var(--color-gmb);
+}
+/* link hover */
+a.a-yearbook-link-cmo:hover {
+    background-color: var(--color-cmo);
+    color: white;
+    text-decoration: none;
+}
+a.a-yearbook-link-avd:hover {
+    background-color: var(--color-avd);
+    color: white;
+    text-decoration: none;
+}
+a.a-yearbook-link-nmd:hover {
+    background-color: var(--color-nmd);
+    color: white;
+    text-decoration: none;
+}
+a.a-yearbook-link-gmb:hover {
+    background-color: var(--color-gmb);
+    color: white;
+    text-decoration: none;
+}
+
 /* Header */
 body {
     position: relative;
@@ -10751,7 +10888,7 @@ a.o-login:link {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
+    margin-top: 1vh;
 }
 
 .m-headerBottom {
@@ -10821,14 +10958,12 @@ a.a-link:visited {
     color: var(--color-white);
     text-decoration: none;
     border: 4px solid var(--color-accent);
-
 }
 
 a.a-link:hover {
     border: 4px solid var(--color-accent);
     color: var(--color-accent);
     background-color: var(--color-white);
-
 }
 
 

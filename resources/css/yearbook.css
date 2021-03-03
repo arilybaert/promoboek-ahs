@@ -9,7 +9,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    justify-content: space-between;
     width: 70vw;
 }
 .o-yearbook-students::after {
@@ -17,9 +16,9 @@
 }
 
 .o-studentcards {
-    /* flex: 10% 0 0; */
+    width: 95%;
+
     padding: 0.5rem;
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +55,18 @@
     font-weight: 800;
     bottom: 0;
     right: 0;
+}
+.a-yearbook-student-major-cmo {
+    background-color: var(--color-cmo);
+}
+.a-yearbook-student-major-avd {
+    background-color: var(--color-avd);
+}
+.a-yearbook-student-major-nmd {
+    background-color: var(--color-nmd);
+}
+.a-yearbook-student-major-gmb {
+    background-color: var(--color-gmb);
 }
 .a-yearbook-student-name {
     color: #C4314B;

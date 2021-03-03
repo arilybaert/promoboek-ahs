@@ -20,13 +20,10 @@ class PortfolioController extends Controller
                  ->where('images.thumbnail', '=', 1);
         })->get();
 
-        // echo '<pre>' . var_export($users, true) . '</pre>';
-
-
         return view('pages.cmo-home', [
             // 'sub_courses' => $sub_courses,
             'students' => $students,
-            'sub_header' => 'Crossmedia',
+            'sub_header' => 'Crossmedia Ontwerp',
             ]);
     }
 
@@ -73,7 +70,7 @@ class PortfolioController extends Controller
         // echo '<pre>' . var_export($images, true) . '</pre>';
         // dd($user);
         return view('pages.cmo-detail', [
-            'sub_header' => $user->first_name . ' <br> ' . $user->last_name,
+            'sub_header' => $user->first_name . ' ' . $user->last_name,
             'images' => $images,
             'student' => $user
         ]);
@@ -118,7 +115,7 @@ class PortfolioController extends Controller
         // echo '<pre>' . var_export($images, true) . '</pre>';
 
         return view('pages.nmd-detail', [
-            'sub_header' => $user->first_name . ' <br> ' . $user->last_name,
+            'sub_header' => $user->first_name . ' ' . $user->last_name,
             'images' => $images,
             'student' => $user
         ]);
@@ -130,7 +127,7 @@ class PortfolioController extends Controller
         // echo '<pre>' . var_export($images, true) . '</pre>';
 
         return view('pages.avd-detail', [
-            'sub_header' => $user->first_name . ' <br> ' . $user->last_name,
+            'sub_header' => $user->first_name . ' ' . $user->last_name,
             'videos' => $videos,
             'student' => $user
         ]);
@@ -154,7 +151,7 @@ class PortfolioController extends Controller
         return view('pages.gmb-home', [
             // 'sub_courses' => $sub_courses,
             'students' => $students,
-            'sub_header' => 'Grafimediabeleid',
+            'sub_header' => 'Grafimedia beleid',
             ]);
     }
     public function getGMBPM()
