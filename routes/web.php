@@ -33,6 +33,7 @@ Route::get('/portfolio-gmb/crossmedia', [PortfolioController::class, 'getGMBCM']
 
 // student detail
 Route::get('/portfolio-cmo/{user}', [PortfolioController::class, 'getCMODetail'])->name('portfolio-cmo-detail');
+Route::get('/portfolio-gmb/{user}', [PortfolioController::class, 'getCMODetail'])->name('portfolio-gmb-detail');
 Route::get('/portfolio-nmd/{user}', [PortfolioController::class, 'getNMDDetail'])->name('portfolio-nmd-detail');
 Route::get('/portfolio-avd/{user}', [PortfolioController::class, 'getAVDDetail'])->name('portfolio-avd-detail');
 

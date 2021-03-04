@@ -1,6 +1,7 @@
 .o-jobcontainer {
     padding-top: 2rem;
     width: 80%;
+    max-width: 840px;
     margin: 0 auto;
 }
 .m-job-new-link {

@@ -32,7 +32,8 @@
 <header class="o-header-alt">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 m-header-alt">
-                <img src="{{asset('/src/img/logo/promoboek-ahs-2.png') }}" alt="GDM" title="GDM" class="a-site-logo-alt ">
+                <a href="{{ route('home')}}" class="a-header-home-link">
+                    <img src="{{asset('/src/img/logo/promoboek-ahs-2.png') }}" alt="GDM" title="GDM" class="a-site-logo-alt "></a>
                 <?php
             $header = \Route::current()->getName();
             ?>
