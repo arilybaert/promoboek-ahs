@@ -2,21 +2,29 @@
 
 @section('content')
 <div class="container">
-    <div class="cmo-detail-header">
+    <div class="o-cmo-detail-header">
 
-        {{-- catchphrase --}}
-        <p class="a-cmo-detail-catchprase">{{$student->catchphrase}}</p>
-
-        {{-- profilepicture --}}
-
-        <div class="m-cmo-detail-container">
-            <img src="/{{$student->profile}}" alt="profile-picture" class="a-cmo-detail-profile">
-            <p class="a-cmo-detail-profile-tag">{{strtoupper($student->course->title_short)}}</p>
+        <div class="row">
+            <div class="col-12 col-sm-5">
+                <div class="m-cmo-detail-container">
+                    <img src="{{asset($student->profile)}}" alt="profile-picture" class="a-cmo-detail-profile">
+                    <p class="a-cmo-detail-profile-tag">{{strtoupper($student->course->title_short)}}</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 m-student-detail-info">
+                <h2 class="a-student-detail-page">
+                    {{ $student->first_name . ' ' . $student->last_name}}
+                </h2>
+                {{-- bio --}}
+                <p class="a-cmo-detail-bio">{{$student->bio}}</p>
+                {{-- catchphrase --}}
+                <p class="a-cmo-detail-catchprase">"{{$student->catchphrase}}"</p>
+            </div>
         </div>
-
-        {{-- bio --}}
-        <p class="a-cmo-detail-bio">{{$student->bio}}</p>
     </div>
+</div>
+<div class="a-border-header-bottom"></div>
+<div class="container">
 
     {{-- portfolio images --}}
     <div class="row">

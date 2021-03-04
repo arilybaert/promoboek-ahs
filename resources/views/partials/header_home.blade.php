@@ -37,7 +37,9 @@
         @endif
 
         <div class="order-1 order-md-2 col-sm-12 col-md-6 m-site-logo">
-            <img src="{{asset('/src/img/logo/promoboek-ahs-2.png') }}" alt="GDM" title="GDM" class="a-site-logo ">
+            <a href="{{ route('home')}}" class="a-header-home-link">
+                <img src="{{asset('/src/img/logo/promoboek-ahs-2.png') }}" alt="GDM" title="GDM" class="a-site-logo ">
+            </a>
         </div>
     </div>
 

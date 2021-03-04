@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout-home')
 
 @section('content')
 <div class="container-xs container-sm container-md">

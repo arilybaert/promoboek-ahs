@@ -1,6 +1,7 @@
 .o-avd-home {
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 80%;
+    max-width: 840px;
+    margin: 0 auto;
 }
 .o-avd-home-card {
     margin-top: 2rem;
