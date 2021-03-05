@@ -107,6 +107,27 @@ a.a-job-confirmation-home-link:link {
     background-color: var(--color-accent);
     color: var(--color-white);
 }
+.o-contact-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+@media only screen and (max-width: 576px) {
+    .o-contact-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .a-contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.a-contact-info {
+    font-weight: bold;
+    color: var(--color-accent);
+}
 .m-contact-icon {
     height: 53px;
     width: 53px;

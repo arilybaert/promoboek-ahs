@@ -10048,7 +10048,8 @@ h3 {
 }
 
 /* navbar */
-
+* {
+    font-family: vag-rundschrift-d, sans-serif;}
 
 /* home content */
 .o-home {
@@ -10060,7 +10061,7 @@ h3 {
 .o-home-card {
     /* flex: 14% 0 0;
     margin: 1rem; */
-    margin-top: 35px;
+    margin-top: 4rem;
 }
 .m-img-container {
     width: 100%;
@@ -10118,7 +10119,8 @@ h3 {
 }
 a.o-home-card:link,
 a.o-home-card:visited {
-    color: var(--color-main);
+    color: var(--color-accent);
+    font-weight: 200;
     text-decoration: none;
 }
 
@@ -10660,6 +10662,27 @@ a.a-job-confirmation-home-link:link {
     border: 6px solid var(--color-accent);
     background-color: var(--color-accent);
     color: var(--color-white);
+}
+.o-contact-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+@media only screen and (max-width: 576px) {
+    .o-contact-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .a-contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.a-contact-info {
+    font-weight: bold;
+    color: var(--color-accent);
 }
 .m-contact-icon {
     height: 53px;

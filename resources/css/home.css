@@ -1,5 +1,6 @@
 /* navbar */
-
+* {
+    font-family: vag-rundschrift-d, sans-serif;}
 
 /* home content */
 .o-home {
@@ -11,7 +12,7 @@
 .o-home-card {
     /* flex: 14% 0 0;
     margin: 1rem; */
-    margin-top: 35px;
+    margin-top: 4rem;
 }
 .m-img-container {
     width: 100%;
@@ -68,7 +69,8 @@
 }
 a.o-home-card:link,
 a.o-home-card:visited {
-    color: var(--color-main);
+    color: var(--color-accent);
+    font-weight: 200;
     text-decoration: none;
 }
 
