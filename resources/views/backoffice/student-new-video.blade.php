@@ -14,11 +14,11 @@
                 @csrf
                 <div class="col-md-6">
                     <label for="file" class="form-label">Video</label>
-                    <input type="file" class="form-control" name="file">
+                    <input type="file" class="form-control" name="file" accept="video/*">
                 </div>
                 <div class="col-md-6">
                     <label for="file" class="form-label">Thumbnail</label>
-                    <input type="file" class="form-control" name="file_thumbnail">
+                    <input type="file" class="form-control" name="file_thumbnail" accept="image/*">
                 </div>
                 <div class="col-md-6">
                   <label for="title" class="form-label">Title</label>

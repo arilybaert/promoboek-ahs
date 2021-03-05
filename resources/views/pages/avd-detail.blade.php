@@ -24,7 +24,8 @@
     </div>
 </div>
 <div class="a-border-header-bottom"></div>
-<div class="container">
+<div class="o-avd-home">
+
 
     {{-- portfolio images --}}
     <div class="row">
