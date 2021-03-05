@@ -14,7 +14,7 @@
                 @csrf
                 <div class="col-md-6">
                     <label for="file" class="form-label">Image</label>
-                    <input type="file" class="form-control" name="file">
+                    <input type="file" class="form-control" name="file" accept="image/*">
                 </div>
                 <div class="col-8"></div>
                 <div class="col-md-6">

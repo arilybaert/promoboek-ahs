@@ -21,6 +21,7 @@ body {
 @import "pending.css";
 @import "register.css";
 @import "avd-home.css";
+@import "verify.css";
 
 body {
     background-color: #fff;
