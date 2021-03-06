@@ -58,6 +58,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.jobs') }}">Jobs</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('changePassword-form') }}">Change password</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
