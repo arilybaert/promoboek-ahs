@@ -25,6 +25,9 @@ for (let [index, trigger] of triggerArray) {
   window.onclick = function(event) {
     if (event.target === document.querySelector(".show")) {
         document.querySelector(".show").classList.remove("show");    }
+        /*
+        Lord forgive me for I have sinned, looping through all video's and pausing them one by one is obviously not a good practice but this was the best option I could find with the available time I had...
+        */
         for(let i = 0; i <= triggerIndex; i++ ){
             document.getElementById(`a-video-${i}`).pause()
         }
