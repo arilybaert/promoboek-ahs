@@ -333,6 +333,8 @@ class StudentController extends Controller
     // show pending verification
     public function getPendingVerification()
     {
-        return view('backoffice.student-pending-verification');
+        return view('backoffice.student-pending-verification', [
+            'sub_header' => 'Pending verification'
+        ]);
     }
 }

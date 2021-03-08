@@ -21,11 +21,11 @@ Route::redirect('/', '/home');
 // FREE ROUTES
 Route::get('/home', [HomeController::class, 'getIndex'])->name('home');
 
-Route::get('/changePassword', [HomeController::class, 'getChangePassword'])->name('changePassword-form');
-Route::post('/changePassword', [HomeController::class,'changePassword'])->name('changePassword');
+Route::get('/changePassword', [HomeController::class, 'getChangePassword'])->name('changePassword-form')->middleware('admin');
+Route::post('/changePassword', [HomeController::class,'changePassword'])->name('changePassword')->middleware('admin');
 
-Route::get('/changePassword/student', [HomeController::class, 'getChangePasswordStudent'])->name('changePassword-form-student');
-Route::post('/changePassword/student', [HomeController::class,'changePassword'])->name('changePassword-student');
+Route::get('/changePassword/student', [HomeController::class, 'getChangePasswordStudent'])->name('changePassword-form-student')->middleware('student');
+Route::post('/changePassword/student', [HomeController::class,'changePassword'])->name('changePassword-student')->middleware('student');
 
 // course home
 Route::get('/portfolio-cmo', [PortfolioController::class, 'getCMO'])->name('portfolio-cmo');
@@ -96,7 +96,7 @@ Route::get('/student/image/delete/{id}', [App\Http\Controllers\StudentController
 Route::get('/student/video/delete/{id}', [App\Http\Controllers\StudentController::class, 'videoDelete'])->name('portfolio.video.delete')->middleware('student');
 
 // ACCOUNT VERIFICATION
-Route::get('/student/pending', [App\Http\Controllers\StudentController::class, 'getPendingVerification'])->name('pending-verification');
+Route::get('/student/pending', [App\Http\Controllers\StudentController::class, 'getPendingVerification'])->name('pending-verification')->middleware('verification');
 
 // EMAIL
 
