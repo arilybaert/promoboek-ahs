@@ -10329,6 +10329,7 @@ i.fa-times {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
     width: 80%;
+    max-width: 840px;
     margin: 0 auto;
     margin-top: 2rem;
 
@@ -10794,6 +10795,8 @@ a.a-job-confirmation-home-link:link {
     color: var(--color-accent);
     font-weight: bold;
     margin-left: 1rem;
+    line-height: 1;
+    margin-bottom: 0;
 }
 .m-filtert-links {
     display: flex;
