@@ -5,9 +5,9 @@
     </div>
 </footer>
 <script>
-console.log('hello world');
 // Get each modal and close button
 const triggers = document.getElementsByClassName("trigger");
+const videos = document.getElementsByClassName("a-video");
 const triggerArray = Array.from(triggers).entries();
 const modals = document.getElementsByClassName("a-modal");
 const closeButtons = document.getElementsByClassName("close");
@@ -24,11 +24,12 @@ for (let [index, trigger] of triggerArray) {
 
   window.onclick = function(event) {
     if (event.target === document.querySelector(".show")) {
-        console.log('click');
         document.querySelector(".show").classList.remove("show");    }
+        for(let i = 0; i <= triggerIndex; i++ ){
+            document.getElementById(`a-video-${i}`).pause()
+        }
   }
 }
-
 </script>
 
 </body>

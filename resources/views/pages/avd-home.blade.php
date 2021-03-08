@@ -8,7 +8,7 @@
 
     @foreach ($students as $student)
 
-        <div class="col-4 o-avd-home-card trigger">
+        <div class="col-12 col-sm-6 col-md-4 o-avd-home-card trigger">
             <div class="m-image-container">
                 <img src="{{ asset($student->thumbnail_image) }}" alt="thumbnail" class="a-avd-home-thumbnail">
                 <img src="{{asset('/src/img/logo/playButton.png')}}" alt="play" class="a-avd-home-play">
@@ -29,7 +29,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <video class="a-avd-modal-video" controls>
+                        <video class="a-avd-modal-video" controls id="a-video-{{$loop->index}}">
                             <source src="{{ asset($student->url) }}" type="video/mp4">
                         Your browser does not support the video tag.
                         </video>
