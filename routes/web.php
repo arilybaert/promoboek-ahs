@@ -24,6 +24,9 @@ Route::get('/home', [HomeController::class, 'getIndex'])->name('home');
 Route::get('/changePassword', [HomeController::class, 'getChangePassword'])->name('changePassword-form');
 Route::post('/changePassword', [HomeController::class,'changePassword'])->name('changePassword');
 
+Route::get('/changePassword/student', [HomeController::class, 'getChangePasswordStudent'])->name('changePassword-form-student');
+Route::post('/changePassword/student', [HomeController::class,'changePassword'])->name('changePassword-student');
+
 // course home
 Route::get('/portfolio-cmo', [PortfolioController::class, 'getCMO'])->name('portfolio-cmo');
 Route::get('/portfolio-cmo/graphic-design', [PortfolioController::class, 'getCMOGD'])->name('portfolio-cmo-gd');

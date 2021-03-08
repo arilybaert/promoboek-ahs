@@ -37,6 +37,10 @@ class HomeController extends Controller
     {
         return view('auth.passwords.change-pass');
     }
+    public function getChangePasswordStudent()
+    {
+        return view('auth.passwords.change-pass-student');
+    }
     public function changePassword(Request $request)
     {
 
