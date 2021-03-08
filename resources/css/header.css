@@ -29,6 +29,8 @@
     color: var(--color-accent);
     font-weight: bold;
     margin-left: 1rem;
+    line-height: 1;
+    margin-bottom: 0;
 }
 .m-filtert-links {
     display: flex;
