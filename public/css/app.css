@@ -10098,8 +10098,16 @@ h3 {
     align-items: center;
     color: var(--color-white);
 }
-
-
+@media only screen and (max-width: 991px) {
+    .a-home-card-tag {
+        font-size: 7pt;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .a-home-card-tag {
+        font-size: 12pt;
+    }
+}
 .a-home-card-title {
     text-align: center;
 }
@@ -10423,7 +10431,7 @@ a.o-nmd-card:hover {
     width: 220px;
     height: 220px;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 767px) {
     .m-cmo-detail-container {
         width: 170px;
         height: 170px;
@@ -10469,6 +10477,11 @@ a.o-nmd-card:hover {
 }
 .m-student-detail-info {
     margin-left: 1rem;
+}
+@media only screen and (max-width: 575px) {
+    .m-student-detail-info {
+        margin-top: 1rem;
+    }
 }
 
 .a-page-title {
@@ -10549,8 +10562,8 @@ a.o-nmd-card:hover {
 }
 .a-yearbook-student-name {
     color: #C4314B;
-    font-weight: 600;
-    font-size: 16pt;
+    font-weight: 501;
+    font-size: 14pt;
     padding-top: 0.7rem;
 }
 
@@ -10715,23 +10728,35 @@ a.a-job-confirmation-home-link:link {
     margin-top: 1rem;
     border: 3px solid var(--color-border);
     border-radius: 3rem;
+
 }
-.m-new-job-input {
+.m-job-new-container {
+    /* margin: 0 auto; */
+}
+/* .m-new-job-input {
+    display: flex;
+    justify-content: flex-end;
+} */
+.m-new-job-label {
     display: flex;
     justify-content: flex-end;
 }
+@media only screen and (max-width: 767px) {
+    .m-new-job-label {
+        justify-content: flex-start;
+    }
+}
 .a-new-job-label {
-    font-weight: 700;
+    font-weight: 501;
+    font-size: 11pt;
     color: var(--color-accent);
-    padding-right: 1rem;
 }
 .a-new-job-input {
     background-color: var(--color-input);
     border: none;
     border-radius: 9rem;
-    padding-left: 1rem;
     color: var(--color-accent);
-    width: 250px;
+    width: 100%;
     height: 40px;
     margin-bottom: 1rem;
 }
@@ -10744,7 +10769,7 @@ a.a-job-confirmation-home-link:link {
     border-radius: 1rem;
     padding-left: 1rem;
     color: var(--color-accent);
-    width: 250px;
+    width: 100%;
     height: 250px;
     margin-bottom: 1rem;
 }
@@ -10809,6 +10834,7 @@ a.a-job-confirmation-home-link:link {
 }
 .a-sub-course-link,
 a.a-sub-course-link:link {
+    font-size: 11pt;
     width: 140px;
     text-align: center;
     padding: 0.5rem 0rem;
@@ -10823,6 +10849,24 @@ a.a-sub-course-link:hover {
     border: 2px solid white;
     background-color: var(--color-accent);
     color: white;
+    text-decoration: none;
+}
+a.a-sub-course-link__alt {
+    font-size: 11pt;
+    width: 140px;
+    text-align: center;
+    padding: 0.5rem 0rem;
+    border-radius: 26px;
+    font-weight: bold;
+    border: 2px solid white;
+    background-color: var(--color-accent);
+    color: white;
+    text-decoration: none;
+}
+a.a-sub-course-link__alt:hover {
+    border: 2px solid var(--color-accent);
+    background-color: white;
+    color: var(--color-accent);
     text-decoration: none;
 }
 .a-yearbook-filter {
@@ -10893,6 +10937,7 @@ body {
     color: var(--color-accent);
     font-weight: bold;
     padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 .a-dashboard-logo {
     font-size: 23pt;
@@ -11032,16 +11077,21 @@ a.a-link:hover {
     padding: 3rem;
 }
 .m-login-menu {
-    width: 70vw;
+    /* width: 70vw; */
 }
 .a-login-label {
-    text-align: right;
     font-weight: bold;
     color: var(--color-accent);
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+@media only screen and (max-width: 767px) {
+    .a-login-label {
+        justify-content: flex-start;
+
+    }
+  }
 .a-login-input {
     background-color: var(--color-input);
     border: none;
@@ -11125,6 +11175,12 @@ a.a-pending-home-button:hover {
     justify-content: flex-end;
     align-items: center;
 }
+@media only screen and (max-width: 767px) {
+    .a-register-label {
+        justify-content: flex-start;
+
+    }
+  }
 .o-form-group {
     margin-bottom: 0.5rem;
 }
@@ -11161,6 +11217,11 @@ a.a-pending-home-button:hover {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+}
+.o-avd-home-card:hover h2 {
+    border-bottom: 1px solid var(--color-accent);
+
 }
 .m-image-container {
     height: 20vh;
@@ -11187,6 +11248,7 @@ a.a-pending-home-button:hover {
     color: var(--color-accent);
     font-size: 16pt;
     font-weight: bold;
+    border-bottom: 1px solid white;
     margin-top: 1rem;
 }
 .a-avd-home-content {

@@ -43,7 +43,7 @@
     width: 220px;
     height: 220px;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 767px) {
     .m-cmo-detail-container {
         width: 170px;
         height: 170px;
@@ -87,4 +87,9 @@
 }
 .m-student-detail-info {
     margin-left: 1rem;
+}
+@media only screen and (max-width: 575px) {
+    .m-student-detail-info {
+        margin-top: 1rem;
+    }
 }

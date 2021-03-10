@@ -8,16 +8,21 @@
     padding: 3rem;
 }
 .m-login-menu {
-    width: 70vw;
+    /* width: 70vw; */
 }
 .a-login-label {
-    text-align: right;
     font-weight: bold;
     color: var(--color-accent);
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+@media only screen and (max-width: 767px) {
+    .a-login-label {
+        justify-content: flex-start;
+
+    }
+  }
 .a-login-input {
     background-color: var(--color-input);
     border: none;

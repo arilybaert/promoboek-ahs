@@ -50,12 +50,12 @@
                     <a href="{{ route('portfolio-cmo-pd') }}" class="a-sub-course-link">Photo Design</a>
                 @break
                 @case('portfolio-cmo-gd')
-                    <a href="{{ route('portfolio-cmo-gd') }}" class="a-sub-course-link">Graphic Design</a>
+                    <a href="{{ $header == 'portfolio-cmo-gd' ? route('portfolio-cmo') : route('portfolio-cmo-gd') }}" class="{{$header == 'portfolio-cmo-gd' ?'a-sub-course-link__alt' : 'a-sub-course-link'}}">Graphic Design</a>
                     <a href="{{ route('portfolio-cmo-pd') }}" class="a-sub-course-link">Photo Design</a>
                 @break
                 @case('portfolio-cmo-pd')
                     <a href="{{ route('portfolio-cmo-gd') }}" class="a-sub-course-link">Graphic Design</a>
-                    <a href="{{ route('portfolio-cmo-pd') }}" class="a-sub-course-link">Photo Design</a>
+                    <a href="{{ $header == 'portfolio-cmo-pd' ? route('portfolio-cmo') : route('portfolio-cmo-pd') }}" class="{{$header == 'portfolio-cmo-pd' ?'a-sub-course-link__alt' : 'a-sub-course-link'}}">Photo Design</a>
                 @break
                 @case('portfolio-avd')
 
