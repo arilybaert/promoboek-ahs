@@ -48,8 +48,16 @@
     align-items: center;
     color: var(--color-white);
 }
-
-
+@media only screen and (max-width: 991px) {
+    .a-home-card-tag {
+        font-size: 7pt;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .a-home-card-tag {
+        font-size: 12pt;
+    }
+}
 .a-home-card-title {
     text-align: center;
 }

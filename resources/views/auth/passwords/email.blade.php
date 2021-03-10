@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-12  o-login-menu">
+    <div class="row o-register">
+        <div class="col-8">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

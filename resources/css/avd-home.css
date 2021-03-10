@@ -7,6 +7,11 @@
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+}
+.o-avd-home-card:hover h2 {
+    border-bottom: 1px solid var(--color-accent);
+
 }
 .m-image-container {
     height: 20vh;
@@ -32,6 +37,7 @@
     color: var(--color-accent);
     font-size: 16pt;
     font-weight: bold;
+    border-bottom: 1px solid white;
     margin-top: 1rem;
 }
 .a-avd-home-content {
