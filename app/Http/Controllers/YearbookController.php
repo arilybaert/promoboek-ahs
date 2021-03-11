@@ -18,7 +18,8 @@ class YearbookController extends Controller
             return view('pages.yearbook', [
                 'students' => $students,
                 'courses' => $courses,
-                'sub_header' => 'Yearbook'
+                'sub_header' => 'Yearbook',
+                'id' => $id
             ]);
 
         // show all students
@@ -28,7 +29,8 @@ class YearbookController extends Controller
             return view('pages.yearbook', [
                 'students' => $students,
                 'courses' => $courses,
-                'sub_header' => 'Yearbook'
+                'sub_header' => 'Yearbook',
+                'id' => false
 
             ]);
         }
