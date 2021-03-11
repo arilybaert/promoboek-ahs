@@ -65,12 +65,12 @@
                     <a href="{{ route('portfolio-gmb-cm') }}" class="a-sub-course-link">Crossmedia</a>
                 @break
                 @case('portfolio-gmb-pm')
-                    <a href="{{ route('portfolio-gmb-pm') }}" class="a-sub-course-link">Printmedia</a>
+                    <a href="{{ $header == 'portfolio-gmb-pm' ? route('portfolio-cmo') : route('portfolio-gmb-pm') }}" class="{{$header == 'portfolio-gmb-pm' ?'a-sub-course-link__alt' : a-sub-course-link}}">Printmedia</a>
                     <a href="{{ route('portfolio-gmb-cm') }}" class="a-sub-course-link">Crossmedia</a>
                 @break
                 @case('portfolio-gmb-cm')
                     <a href="{{ route('portfolio-gmb-pm') }}" class="a-sub-course-link">Printmedia</a>
-                    <a href="{{ route('portfolio-gmb-cm') }}" class="a-sub-course-link">Crossmedia</a>
+                    <a href="{{ $header == 'portfolio-gmb-cm' ? route('portfolio-cmo') : route('portfolio-gmb-cm') }}" class="{{$header == 'portfolio-gmb-cm' ?'a-sub-course-link__alt' : a-sub-course-link}}">Crossmedia</a>
                 @break
                 @case('yearbook')
                     <div class="o-yearbook-filter">
