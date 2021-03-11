@@ -36,6 +36,7 @@
                     <img src="{{asset('/src/img/logo/promoboek-ahs-2.png') }}" alt="GDM" title="GDM" class="a-site-logo-alt "></a>
                 <?php
             $header = \Route::current()->getName();
+            // $yearbook_header = \Route::current();
             ?>
             <p class="a-course-title-alt">
                 {{-- {{str_replace(' ',"\n",$sub_header ?? $header)}} --}}
@@ -73,10 +74,11 @@
                     <a href="{{ $header == 'portfolio-gmb-cm' ? route('portfolio-cmo') : route('portfolio-gmb-cm') }}" class="{{$header == 'portfolio-gmb-cm' ?'a-sub-course-link__alt' : a-sub-course-link}}">Crossmedia</a>
                 @break
                 @case('yearbook')
+
                     <div class="o-yearbook-filter">
                         @foreach ($courses as $course)
                             @if($course->title_short !== 'teacher')
-                                <a href="{{ url('yearbook/'. $course->title_short .'/') }}" class="a-yearbook-filter a-yearbook-link-{{$course->title_short}}">{{strtoupper($course->title_short)}}</a>
+                                <a href="{{ $id == $course->title_short ? route('yearbook') : url('yearbook/'. $course->title_short .'/') }}" class="{{ $id == $course->title_short ? 'a-yearbook-link-' . $course->title_short . '__alt' : 'a-yearbook-link-' . $course->title_short}} a-yearbook-filter ">{{strtoupper($course->title_short)}}</a>
                             @endif
                         @endforeach
 
