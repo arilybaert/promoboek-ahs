@@ -48,45 +48,45 @@
                 </div>
             </div>
         </div>
-    @endforeach
 
-            <!-- The Modal -->
-            <div class="a-modal">
+        <!-- The Modal -->
+        <div class="a-modal">
 
-                <!-- Modal content -->
-                <div class="o-modal-content">
+            <!-- Modal content -->
+            <div class="o-modal-content">
 
 
-                        <div class="row">
-                            <div class="col-10">
-                                <div class="row">
-                                    <div class="col-12 col-sm-5 col-md-5 o-contact-icon">
-                                        <div class="m-contact-icon m-contact-icon__top">
-                                            <i class="fas fa-mobile-alt a-contact-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-7 col-md-7 a-contact-info">
-                                        <span>{{ $job->phone}}</span>
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-5 o-contact-icon">
+                                    <div class="m-contact-icon m-contact-icon__top">
+                                        <i class="fas fa-mobile-alt a-contact-icon"></i>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 col-sm-5 col-md-5 o-contact-icon">
-                                        <div class="m-contact-icon">
-                                            <i class="fas fa-envelope-open-text a-contact-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-7 col-md-7 a-contact-info">
-                                        <span>{{ $job->email}} </span>
-                                    </div>
+                                <div class="col-12 col-sm-7 col-md-7 a-contact-info">
+                                    <span>{{ $job->phone}}</span>
                                 </div>
                             </div>
-                            <div class="col-2 m-cmo-portfolioBtn">
-                                <i class="fas fa-times close"></i>
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-5 o-contact-icon">
+                                    <div class="m-contact-icon">
+                                        <i class="fas fa-envelope-open-text a-contact-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-7 col-md-7 a-contact-info">
+                                    <span>{{ $job->email}} </span>
+                                </div>
                             </div>
-                    </div>
+                        </div>
+                        <div class="col-2 m-cmo-portfolioBtn">
+                            <i class="fas fa-times close"></i>
+                        </div>
                 </div>
-
             </div>
+
+        </div>
+    @endforeach
 
 </div>
 @endsection
