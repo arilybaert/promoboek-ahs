@@ -124,6 +124,7 @@ class StudentController extends Controller
     // upload image
     public function postUserNewImage(Request $r)
     {
+        // dd($r->file->hashName());
 
         var_dump($r->file->hashName());
 
@@ -131,7 +132,37 @@ class StudentController extends Controller
         $user = User::where('id', $id)->first();
 
         $course_directory = $user->course->title_short;
+
         $r->file->store($course_directory, ['disk' => 'portfolio_files']);
+
+        // compress image
+        $filepath = public_path('/src/img/portfolio/'. $course_directory . '/' . $r->file->hashName());
+        $mime = mime_content_type($filepath);
+        $output = new \CURLFile($filepath, $mime, $r->file->hashName());
+        $data = ["files" => $output];
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'http://api.resmush.it/?qlty=50');
+        curl_setopt($ch, CURLOPT_POST,1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            $result = curl_error($ch);
+        }
+        curl_close ($ch);
+
+        $arr_result = json_decode($result);
+
+        // store the optimized version of the image
+        $ch = curl_init($arr_result->dest);
+        $fp = fopen($filepath, 'wb');
+        curl_setopt($ch, CURLOPT_FILE, $fp);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_exec($ch);
+        curl_close($ch);
+        fclose($fp);
 
         $validationRules = [
             'title'=> 'required',
