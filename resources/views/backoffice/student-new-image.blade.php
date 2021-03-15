@@ -26,6 +26,12 @@
                   <label for="tags" class="form-label">Tags</label>
                   <input type="text" class="form-control" name="tags">
                 </div>
+                @if ($user->course_id === 3)
+                <div class="col-md-6">
+                    <label for="href" class="form-label">Url</label>
+                    <input type="text" class="form-control" name="href" value="" placeholder="https://www.yoursite.com">
+                </div>
+                @endif
                 <div class="col-md-6">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" name="thumbnail" id="thumbnail">

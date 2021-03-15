@@ -92,8 +92,8 @@ Route::get('/student/video/new', [App\Http\Controllers\StudentController::class,
 Route::post('/student/image/new', [App\Http\Controllers\StudentController::class, 'postUserNewImage'])->name('portfolio.image.create')->middleware('student');
 Route::post('/student/video/new', [App\Http\Controllers\StudentController::class, 'postUserNewVideo'])->name('portfolio.video.create')->middleware('student');
 
-Route::get('/student/image/delete/{id}', [App\Http\Controllers\StudentController::class, 'imageDelete'])->name('portfolio.image.delete')->middleware('student');
-Route::get('/student/video/delete/{id}', [App\Http\Controllers\StudentController::class, 'videoDelete'])->name('portfolio.video.delete')->middleware('student');
+Route::get('/student/image/delete/{image}', [App\Http\Controllers\StudentController::class, 'imageDelete'])->name('portfolio.image.delete')->middleware('student');
+Route::get('/student/video/delete/{video}', [App\Http\Controllers\StudentController::class, 'videoDelete'])->name('portfolio.video.delete')->middleware('student');
 
 // ACCOUNT VERIFICATION
 Route::get('/student/pending', [App\Http\Controllers\StudentController::class, 'getPendingVerification'])->name('pending-verification')->middleware('verification');

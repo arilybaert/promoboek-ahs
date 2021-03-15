@@ -25,7 +25,7 @@ class YearbookController extends Controller
         // show all students
         } else {
             $students = User::all();
-
+            // dd($students[0]->course);
             return view('pages.yearbook', [
                 'students' => $students,
                 'courses' => $courses,

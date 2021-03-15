@@ -40,7 +40,15 @@
                   <textarea type="text" class="form-control" name="description" style="height: 200px" ></textarea>
                 </div>
 
+                <div class="col-12">
+                    <div class="progress">
 
+                        <div class="bar"></div >
+
+                        <div class="percent">0%</div >
+
+                    </div>
+                </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">Save</button>
                 </div>
