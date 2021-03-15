@@ -10,7 +10,7 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <form class="row g-3" action="{{ route('portfolio.video.create' )}}" method="POST"  enctype="multipart/form-data">
+            <form class="row g-3" action="{{ route('portfolio.video.create' )}}" method="POST"  enctype="multipart/form-data" id="form">
                 @csrf
                 <div class="col-md-6">
                     <label for="file" class="form-label">Video</label>
@@ -48,6 +48,7 @@
                         <div class="percent">0%</div >
 
                     </div>
+
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">Save</button>

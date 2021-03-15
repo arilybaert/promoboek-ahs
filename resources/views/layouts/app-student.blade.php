@@ -18,6 +18,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+    <style>
+
+        .progress { position:relative; width:100%; }
+
+        .bar { background-color: #00ff00; width:0%; height:20px; }
+
+        .percent { position:absolute; display:inline-block; left:50%; color: #040608;}
+
+   </style>
+
 </head>
 <body>
     <div id="app">
@@ -88,96 +100,64 @@
             @yield('content')
         </main>
     </div>
-{{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script src="http://malsup.github.com/jquery.form.js"></script>
-<script type="text/javascript">
-    console.log('hey');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
+    <script type="text/javascript">
 
-    function validate(formData, jqForm, options) {
+        var SITEURL = "{{URL('/')}}";
 
-        var form = jqForm[0];
+        $(function() {
 
-        if (!form.file.value) {
+            $(document).ready(function()
 
-            alert('File not found');
+            {
 
-            return false;
+                var bar = $('.bar');
 
-        }
+                var percent = $('.percent');
 
-    }
+                  $('#form').ajaxForm({
 
+                    beforeSend: function() {
 
+                        var percentVal = '0%';
 
-    (function() {
+                        bar.width(percentVal)
 
+                        percent.html(percentVal);
 
+                    },
 
-    var bar = $('.bar');
+                    uploadProgress: function(event, position, total, percentComplete) {
 
-    var percent = $('.percent');
+                        var percentVal = percentComplete + '%';
 
-    var status = $('#status');
+                        bar.width(percentVal)
 
+                        percent.html(percentVal);
 
+                    },
 
-    $('form').ajaxForm({
+                    complete: function(xhr) {
 
-        beforeSubmit: validate,
+                        alert('File Has Been Uploaded Successfully');
 
-        beforeSend: function() {
+                        window.location.href = SITEURL +"/"+"ajax-file-upload-progress-bar";
 
-            status.empty();
+                    }
 
-            var percentVal = '0%';
+                  });
 
-            var posterValue = $('input[name=file]').fieldValue();
+            });
 
-            bar.width(percentVal)
+         });
 
-            percent.html(percentVal);
+        </script>
 
-        },
-
-        uploadProgress: function(event, position, total, percentComplete) {
-
-            var percentVal = percentComplete + '%';
-
-            bar.width(percentVal)
-
-            percent.html(percentVal);
-
-        },
-
-        success: function() {
-
-            var percentVal = 'Wait, Saving';
-
-            bar.width(percentVal)
-
-            percent.html(percentVal);
-
-        },
-
-        complete: function(xhr) {
-
-            status.html(xhr.responseText);
-
-            alert('Uploaded Successfully');
-
-            window.location.href = "/file-upload";
-
-        }
-
-    });
-
-
-
-    })();
-
-</script> --}}
 </body>
 
 </html>

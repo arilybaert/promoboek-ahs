@@ -181,13 +181,3 @@ a.o-home-card:visited {
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
   }
 
-  /* Go from zero to full opacity */
-  @keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  .progress { position:relative; width:100%; border: 1px solid #7F98B2; padding: 1px; border-radius: 3px; }
-
-  .bar { background-color: #B4F5B4; width:0%; height:25px; border-radius: 3px; }
-
-  .percent { position:absolute; display:inline-block; top:3px; left:48%; color: #7F98B2;}

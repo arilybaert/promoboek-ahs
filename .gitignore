@@ -11,7 +11,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/public/src/video
+/public/src/video/portfolio
 # /public/src/img/portfolio
 # /public/src/img/profile
 # /public/src/img/thumbnails
