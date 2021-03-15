@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Image;
 use App\Models\Video;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Storage;
+=======
+
+>>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -51,6 +55,10 @@ class StudentController extends Controller
 
     public function getUserImage(Image $image)
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
         return view('backoffice.student-image', [
             'image' => $image
         ]);
@@ -86,8 +94,12 @@ class StudentController extends Controller
                 'title' => $r->title,
                 'tags' => $r->tags,
                 'content'=> $r->description,
+<<<<<<< HEAD
                 'thumbnail' => true,
                 'href' => $r->href
+=======
+                'thumbnail' => true
+>>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
             ];
             $r->validate($validationRules);
 
@@ -100,8 +112,12 @@ class StudentController extends Controller
                 'title' => $r->title,
                 'tags' => $r->tags,
                 'content'=> $r->description,
+<<<<<<< HEAD
                 'thumbnail' => false,
                 'href' => $r->href
+=======
+                'thumbnail' => false
+>>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
             ];
             $r->validate($validationRules);
         }
@@ -119,10 +135,14 @@ class StudentController extends Controller
     // upload image form
     public function createUserImage()
     {
+<<<<<<< HEAD
         $user = Auth::user();
         return view('backoffice.student-new-image', [
             'user' => $user
             ]);
+=======
+        return view('backoffice.student-new-image');
+>>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
     }
 
     // upload image
@@ -221,11 +241,17 @@ class StudentController extends Controller
     }
 
     // delete image
+<<<<<<< HEAD
     public function imageDelete(Image $image) {
 
         Storage::disk('portfolio_files')->delete(substr($image->url, 17));
         Image::find($image->id)->delete();
 
+=======
+    public function imageDelete(Request $r) {
+
+        Image::find($r->id)->delete();
+>>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
 
         return redirect()->route('student');
     }
@@ -361,12 +387,18 @@ class StudentController extends Controller
     }
 
     // delete video
+<<<<<<< HEAD
     public function videoDelete(Video $video) {
 
         Storage::disk('portfolio_thumbnail_files')->delete(substr($video->thumbnail_image, 19));
         Storage::disk('portfolio_video_files')->delete(substr($video->url, 19));
 
         Video::find($video->id)->delete();
+=======
+    public function videoDelete(Request $r) {
+
+        Video::find($r->id)->delete();
+>>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
 
         return redirect()->route('student');
     }

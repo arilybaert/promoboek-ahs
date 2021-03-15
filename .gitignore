@@ -12,6 +12,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 /public/src/video/portfolio
+# /public/src/video
 # /public/src/img/portfolio
 # /public/src/img/profile
 # /public/src/img/thumbnails
