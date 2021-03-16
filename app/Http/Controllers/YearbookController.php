@@ -25,11 +25,6 @@ class YearbookController extends Controller
         // show all students
         } else {
             $students = User::all();
-<<<<<<< HEAD
-            // dd($students[0]->course);
-=======
-
->>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
             return view('pages.yearbook', [
                 'students' => $students,
                 'courses' => $courses,
