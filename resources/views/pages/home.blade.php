@@ -29,19 +29,19 @@
     <div class="row o-video-content">
         <div class="col-12 o-home-video">
             <video class="a-home-video" controls id="cmo">
-                <source src="{{ asset('src/video/home/home-cmo.mp4') }}" type="video/mp4">
+                <source src="{{ asset('src/video/home/home-cmo.mov') }}" type="video/mp4">
             Your browser does not support the video tag.
             </video>
             <video class="a-home-video" controls id="avd">
-                <source src="{{ asset('src/video/home/home-avd.mp4') }}" type="video/mp4">
+                <source src="{{ asset('src/video/home/home-avd.mov') }}" type="video/mp4">
             Your browser does not support the video tag.
             </video>
             <video class="a-home-video" controls id="nmd">
-                <source src="{{ asset('src/video/home/home-nmd.mp4') }}" type="video/mp4">
+                <source src="{{ asset('src/video/home/home-nmd.mov') }}" type="video/mp4">
             Your browser does not support the video tag.
             </video>
             <video class="a-home-video" controls id="gmb">
-                <source src="{{ asset('src/video/home/home-gmb.mp4') }}" type="video/mp4">
+                <source src="{{ asset('src/video/home/home-gmb.mov') }}" type="video/mp4">
             Your browser does not support the video tag.
             </video>
         </div>
