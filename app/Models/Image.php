@@ -24,17 +24,7 @@ class Image extends Model
         'title',
         'url',
         'thumbnail',
-<<<<<<< HEAD
         'student_id',
         'href'
     ];
-=======
-        'student_id'
-
-    ];
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
->>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
 }
