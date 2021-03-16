@@ -69,12 +69,9 @@
 
                                     <div class="col-2 m-cmo-portfolioBtn">
                                         <i class="fas fa-times close"></i>
-<<<<<<< HEAD
                                         <a class="a-cmo-portfolioBtn" href="{{$image->href}}">
                                             <span>Site</span>
                                         </a>
-=======
->>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
                                     </div>
                             </div>
                         </div>

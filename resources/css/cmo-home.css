@@ -121,6 +121,14 @@ a.a-sub-course-title:hover {
     object-fit: cover;
 }
 
+.a-student-portofolio-header {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+.a-student-portofolio-sub_header {
+    font-weight: 200;
+    color: var(--color-portfolio-home-text);
+}
 .show {
     opacity: 1;
     visibility: visible !important;
@@ -130,6 +138,8 @@ a.a-sub-course-title:hover {
 .a-cmo-portfolio-description {
     padding-bottom: 2rem;
     box-sizing: border-box;
+    font-weight: 200;
+    color: var(--color-portfolio-home-text);
 }
 
 .m-cmo-portfolioBtn {

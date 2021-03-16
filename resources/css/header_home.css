@@ -2,8 +2,9 @@
 body {
     position: relative;
 }
+
 .o-login {
-    position: relative;
+    position: absolute;
     top: 20px;
     left: 20px;
     display: flex;
@@ -14,9 +15,6 @@ body {
     font-weight: bold;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-}
-.a-dashboard-logo {
-    font-size: 23pt;
 }
 a.o-login:hover {
     text-decoration: none;
@@ -29,6 +27,34 @@ a.o-login:link {
     color: var(--color-accent);
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(white);
+}
+.o-profile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    text-align: center;
+    color: var(--color-accent);
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+a.o-profile:hover {
+    text-decoration: none;
+    color: var(--color-accent);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-accent);
+}
+a.o-profile:link {
+    text-decoration: none;
+    color: var(--color-accent);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(white);
+}
+.a-dashboard-logo {
+    font-size: 23pt;
 }
 .a-login-logo {
     height: auto;
@@ -68,7 +94,11 @@ a.o-login:link {
     width: auto;
     padding: 0px 40px;
 }
-
+@media only screen and (max-width: 575px) {
+    .a-site-logo {
+        height: 65px;
+    }
+  }
 .a-subHeader {
     line-height: 0.75;
     padding: 0 16px;

@@ -13,10 +13,15 @@
 
     <?php
         if (Auth::check()) {
+            $user = Auth::user();
     ?>
             <a class="o-login" href="{{ route('admin')}} ">
                 <i class="fas fa-tachometer-alt a-dashboard-logo"></i>
                 <span>Dash</span>
+            </a>
+            <a class="o-profile" href="{{ route('portfolio-'. $user->course->title_short . '-detail', $user->id)}} ">
+                <i class="fas fa-user-circle a-dashboard-logo"></i>
+                <span>Profile</span>
             </a>
     <?php
         } else {

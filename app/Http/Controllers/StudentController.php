@@ -130,7 +130,7 @@ class StudentController extends Controller
     {
         // dd($r->file->hashName());
 
-        var_dump($r->file->hashName());
+        // var_dump($r->file->hashName());
 
         $id = Auth::user()->id;
         $user = User::where('id', $id)->first();

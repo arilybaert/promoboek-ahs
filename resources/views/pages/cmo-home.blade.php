@@ -38,8 +38,8 @@
                                         <img src="{{ asset($student->url) }}" alt="" class="a-cmo-modal-image">
                                     </div>
                                     <div class="o-student-portofolio-info col-12 col-md-5">
-                                        <h2>{{$student->title}}</h2>
-                                        <h3>{{$student->first_name . " " . $student->last_name}}</h3>
+                                        <h2 class="a-student-portofolio-header">{{$student->title}}</h2>
+                                        <h3  class="a-student-portofolio-sub_header">{{$student->first_name . " " . $student->last_name}}</h3>
                                         <p class="a-cmo-portfolio-description">
                                             {{$student->content}}
                                         </p>
@@ -49,7 +49,7 @@
 
                             <div class="col-2 m-cmo-portfolioBtn">
                                 <i class="fas fa-times close"></i>
-                                <a class="a-cmo-portfolioBtn" href="{{route('portfolio-cmo-detail', $student->id)}}">
+                                <a class="a-cmo-portfolioBtn" href="{{route('portfolio-cmo-detail', $student->student_id)}}">
                                     <span>portfolio</span>
                                 </a>
                             </div>

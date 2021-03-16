@@ -35,7 +35,7 @@
                 <div class="col-md-6">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" name="thumbnail" id="thumbnail">
-                        <label class="form-check-label" for="thumbnail">Thumbnail images</label>
+                        <label class="form-check-label" for="thumbnail">Thumbnail image (By activating this you will set this image as your main image on the homepage of your course)</label>
                     </div>
                 </div>
                 <div class="col-md-12">

@@ -2,9 +2,14 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-10">
             <h1>
                 Edit profile
+            </h1>
+        </div>
+        <div class="col-2">
+            <h1>
+                <a href="{{route('portfolio-'. $user->course->title_short . '-detail', $user->id)}}" class="btn btn-info text-white">Go to portfolio</a>
             </h1>
         </div>
     </div>

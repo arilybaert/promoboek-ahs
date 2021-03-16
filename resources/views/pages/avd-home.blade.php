@@ -37,8 +37,8 @@
                 </div>
                 <div class="row o-avd-modal-portfolio">
                     <div class="col-4">
-                        <h2>{{$student->title}}</h2>
-                        <h3>{{$student->first_name . " " . $student->last_name}}</h3>
+                        <h2  class="a-student-portofolio-header">{{$student->title}}</h2>
+                        <h3 class="a-student-portofolio-sub_header">{{$student->first_name . " " . $student->last_name}}</h3>
                     </div>
                     <div class="col-8">
                         <p class="a-cmo-portfolio-description">
