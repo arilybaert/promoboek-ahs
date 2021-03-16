@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Image extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'student_id', 'id');
@@ -19,8 +18,6 @@ class Image extends Model
      *
      * @var array
      */
-=======
->>>>>>> d68138e3ff41c129c4c70269e92c7d79740ff457
     protected $fillable = [
         'content',
         'tags',

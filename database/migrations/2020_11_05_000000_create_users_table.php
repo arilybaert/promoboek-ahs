@@ -19,8 +19,8 @@ class CreateUsersTable extends Migration
 
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('bio', 1000);
-            $table->string('catchphrase');
+            $table->string('bio', 1000)->nullable();
+            $table->string('catchphrase')->nullable();
             $table->string('profile');
             $table->boolean('request')->default(false);
 

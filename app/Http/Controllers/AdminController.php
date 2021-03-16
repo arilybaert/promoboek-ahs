@@ -117,19 +117,34 @@ class AdminController extends Controller
 
     public function postUserInfo(Request $r)
     {
-        $r->file->store('profile', ['disk' => 'profile_files']);
+        $data = [];
+        if($r->file !== null) {
+            $r->file->store('profile', ['disk' => 'profile_files']);
+            $data = [
+                'first_name' => $r->firstname,
+                'last_name' => $r->lastname,
+                'email' => $r->email,
+                'course_id' => $r->course,
+                'sub_course_id' => $r->sub_course,
+                'catchphrase' => $r->catchphrase,
+                'bio' => $r->bio,
+                'profile' => 'src/img/profile/' . $r->file->hashName()
+            ];
+
+        } else {
+            $data = [
+                'first_name' => $r->firstname,
+                'last_name' => $r->lastname,
+                'email' => $r->email,
+                'course_id' => $r->course,
+                'sub_course_id' => $r->sub_course,
+                'catchphrase' => $r->catchphrase,
+                'bio' => $r->bio,
+            ];
+        }
 
         // dd($r);
-        $data = [
-            'first_name' => $r->firstname,
-            'last_name' => $r->lastname,
-            'email' => $r->email,
-            'course_id' => $r->course,
-            'sub_course_id' => $r->sub_course,
-            'catchphrase' => $r->catchphrase,
-            'bio' => $r->bio,
-            'profile' => 'src/img/profile/' . $r->file->hashName()
-        ];
+
         if($r->id){
             $user = User::where('id', $r->id)->first();
             $user->update($data);
