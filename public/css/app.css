@@ -10494,6 +10494,8 @@ a.o-nmd-card:hover {
     margin-top: 3rem;
     width: 90%;
     max-width: 800px;
+    margin-bottom: 3rem;
+
 
 }
 .o-cmo-detail-main {
@@ -10567,7 +10569,6 @@ a.o-nmd-card:hover {
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 .a-student-detail-page {
