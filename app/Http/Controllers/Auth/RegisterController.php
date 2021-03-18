@@ -89,7 +89,7 @@ class RegisterController extends Controller
             'title' => 'Administrator',
             'body' => 'There is a new account submission by ' . $data['first_name'] . ' ' . $data['last_name']
         ];
-        Mail::to('ari_lybaert@outlook.com')->send(new \App\Mail\NotificationMail($details));
+        Mail::to('studiogdm2020@gmail.com')->send(new \App\Mail\NotificationMail($details));
 
         if(strlen($data['sub_course']) == 1) {
             return User::create([
