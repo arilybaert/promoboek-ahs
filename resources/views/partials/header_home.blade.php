@@ -19,10 +19,13 @@
                 <i class="fas fa-tachometer-alt a-dashboard-logo"></i>
                 <span>Dash</span>
             </a>
+            @if ($user->course_id !== 5)
+
             <a class="o-profile" href="{{ route('portfolio-'. $user->course->title_short . '-detail', $user->id)}} ">
                 <i class="fas fa-user-circle a-dashboard-logo"></i>
                 <span>Profile</span>
             </a>
+            @endif
     <?php
         } else {
     ?>

@@ -11,7 +11,7 @@
         @foreach ( $students as $student)
 
 
-            <a class="o-nmd-card"  href="{{route('portfolio-nmd-detail', $student->id)}}">
+            <a class="o-nmd-card"  href="{{route('portfolio-nmd-detail', $student->student_id)}}">
                 <img src="{{ asset($student->url) }}" alt="" class="a-nmd-image">
                 <h3 class="a-nmd-tags">{{ $student->tags}} </h3>
                 <p class="a-nmd-home-content">{{ $student->content}} </p>
