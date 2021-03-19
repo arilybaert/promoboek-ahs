@@ -82,6 +82,7 @@ a.o-profile:link {
     color: var(--color-accent);
     margin-top: 35px;
 
+
 }
 .m-site-logo {
     display: flex;
@@ -103,6 +104,7 @@ a.o-profile:link {
     line-height: 0.75;
     padding: 0 16px;
     text-align: center;
+    font-family: vag-bold;
 }
 
 /* Sub header LINE styling */

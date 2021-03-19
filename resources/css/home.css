@@ -1,7 +1,3 @@
-/* navbar */
-* {
-    font-family: vag-rundschrift-d, sans-serif;}
-
 /* home content */
 .o-home {
     display: flex;
@@ -49,6 +45,8 @@
     justify-content: center;
     align-items: center;
     color: var(--color-white);
+    font-family: vag-bold;
+
 }
 @media only screen and (max-width: 991px) {
     .a-home-card-tag {
@@ -71,6 +69,7 @@
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid var(--color-white);
+    font-family: vag-bold;
 
 }
 .a-home-explination {

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: vag;
+    src: url('/src/fonts/VAG-Rounded-Regular.ttf');
+}
+@font-face {
+    font-family: vag-bold;
+    src: url('/src/fonts/VAG-Rounded-Bold.ttf');
+}
+* {
+    font-family: vag;
+}
 body {
     margin: 0;
     padding: 0;

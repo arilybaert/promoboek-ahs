@@ -10047,10 +10047,6 @@ h3 {
     background-color: var(--color-gmb);
 }
 
-/* navbar */
-* {
-    font-family: vag-rundschrift-d, sans-serif;}
-
 /* home content */
 .o-home {
     display: flex;
@@ -10099,6 +10095,8 @@ h3 {
     justify-content: center;
     align-items: center;
     color: var(--color-white);
+    font-family: vag-bold;
+
 }
 @media only screen and (max-width: 991px) {
     .a-home-card-tag {
@@ -10121,6 +10119,7 @@ h3 {
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid var(--color-white);
+    font-family: vag-bold;
 
 }
 .a-home-explination {
@@ -11136,6 +11135,7 @@ a.o-profile:link {
     color: var(--color-accent);
     margin-top: 35px;
 
+
 }
 .m-site-logo {
     display: flex;
@@ -11157,6 +11157,7 @@ a.o-profile:link {
     line-height: 0.75;
     padding: 0 16px;
     text-align: center;
+    font-family: vag-bold;
 }
 
 /* Sub header LINE styling */
@@ -11431,6 +11432,17 @@ a.a-pending-home-button:hover {
 }
 
 
+@font-face {
+    font-family: vag;
+    src: url('/src/fonts/VAG-Rounded-Regular.ttf');
+}
+@font-face {
+    font-family: vag-bold;
+    src: url('/src/fonts/VAG-Rounded-Bold.ttf');
+}
+* {
+    font-family: vag;
+}
 body {
     margin: 0;
     padding: 0;
