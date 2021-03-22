@@ -19,23 +19,24 @@
 }
 .m-header-alt {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
     padding-bottom: 2rem;
 
 }
 .a-course-title-alt {
-    font-size: 16pt;
+    font-size: 18pt;
     color: var(--color-accent);
-    font-weight: bold;
+    font-family: vag-bold;
     margin-left: 1rem;
+    padding-bottom: 0.5rem;
     line-height: 1;
     margin-bottom: 0;
 }
 .m-filtert-links {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     padding-bottom: 2rem;
 }
 .m-filtert-links a:not(:first-child) {

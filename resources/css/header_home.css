@@ -62,6 +62,7 @@ a.o-profile:link {
     width: auto;
 }
 .o-header {
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

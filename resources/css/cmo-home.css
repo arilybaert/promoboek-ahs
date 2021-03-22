@@ -113,6 +113,8 @@ a.a-sub-course-title:hover {
     /* width: 24rem; */
     border-radius: 0.5rem;
     width: 70%;
+    max-width: 840px;
+
 }
 .a-cmo-modal-image {
     border-radius: 0.5rem;
@@ -122,7 +124,7 @@ a.a-sub-course-title:hover {
 }
 
 .a-student-portofolio-header {
-    font-weight: bold;
+    font-family: vag-bold;
     color: var(--color-accent);
 }
 .a-student-portofolio-sub_header {

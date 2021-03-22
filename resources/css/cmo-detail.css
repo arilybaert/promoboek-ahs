@@ -86,6 +86,7 @@
     font-size: 19pt;
     font-weight: bold;
     color: var(--color-accent);
+    font-family: vag-bold;
 }
 .m-student-detail-info {
     margin-left: 1rem;

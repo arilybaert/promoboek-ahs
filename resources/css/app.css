@@ -7,7 +7,7 @@
     src: url('/src/fonts/VAG-Rounded-Bold.ttf');
 }
 * {
-    font-family: vag;
+    font-family: vag, "sans-serif";
 }
 body {
     margin: 0;

@@ -14,7 +14,7 @@ class YearbookController extends Controller
         // filter students
         if($id != null) {
             $course = Course::where('title_short', $id)->first();
-            $students = User::where('course_id', $course->id)->get();
+            $students = User::where('course_id', $course->id)->where('request', false)->get();
             return view('pages.yearbook', [
                 'students' => $students,
                 'courses' => $courses,
@@ -24,7 +24,7 @@ class YearbookController extends Controller
 
         // show all students
         } else {
-            $students = User::all();
+            $students = User::where('request', false)->get();
             return view('pages.yearbook', [
                 'students' => $students,
                 'courses' => $courses,

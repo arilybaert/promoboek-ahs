@@ -28,6 +28,7 @@ a.a-job-new-link:link {
 }
 .a-job-title {
     color: var(--color-accent);
+    font-family: vag-bold;
     font-size: 24pt;
     font-weight: 600;
 }

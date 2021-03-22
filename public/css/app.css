@@ -10348,6 +10348,8 @@ a.a-sub-course-title:hover {
     /* width: 24rem; */
     border-radius: 0.5rem;
     width: 70%;
+    max-width: 840px;
+
 }
 .a-cmo-modal-image {
     border-radius: 0.5rem;
@@ -10358,7 +10360,7 @@ a.a-sub-course-title:hover {
 }
 
 .a-student-portofolio-header {
-    font-weight: bold;
+    font-family: vag-bold;
     color: var(--color-accent);
 }
 .a-student-portofolio-sub_header {
@@ -10574,6 +10576,7 @@ a.o-nmd-card:hover {
     font-size: 19pt;
     font-weight: bold;
     color: var(--color-accent);
+    font-family: vag-bold;
 }
 .m-student-detail-info {
     margin-left: 1rem;
@@ -10591,6 +10594,10 @@ a.o-nmd-card:hover {
     display: flex;
     justify-content: space-evenly;
 }
+.a-yearbook-filter {
+    display: flex;
+    justify-content: space-evenly;
+}
 .o-yearbook-students {
     display: flex;
     flex-wrap: wrap;
@@ -10604,12 +10611,14 @@ a.o-nmd-card:hover {
 
 .o-studentcards {
     width: 95%;
-
     padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.o-studentcards:hover {
+    text-decoration: none;
 }
 .m-yearbook-image-container {
     position: relative;
@@ -10630,6 +10639,8 @@ a.o-nmd-card:hover {
 }
 .a-yearbook-student-name {
     text-align: center;
+    font-family: vag-bold;
+
 }
 .a-yearbook-student-major {
     display: flex;
@@ -10640,13 +10651,14 @@ a.o-nmd-card:hover {
     position: absolute;
     background-color: var(--color-cmo);
     color: var(--color-white);
-    border: 7px solid var(--color-white);
+    border: 5px solid var(--color-white);
     height: 9vh;
     width: 9vh;
     border-radius: 50%;
     font-weight: 800;
     bottom: 0;
     right: 0;
+
 }
 .a-yearbook-student-major-cmo {
     background-color: var(--color-cmo);
@@ -10698,6 +10710,7 @@ a.a-job-new-link:link {
 }
 .a-job-title {
     color: var(--color-accent);
+    font-family: vag-bold;
     font-size: 24pt;
     font-weight: 600;
 }
@@ -10910,23 +10923,24 @@ a.a-job-confirmation-home-link:link {
 }
 .m-header-alt {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
     padding-bottom: 2rem;
 
 }
 .a-course-title-alt {
-    font-size: 16pt;
+    font-size: 18pt;
     color: var(--color-accent);
-    font-weight: bold;
+    font-family: vag-bold;
     margin-left: 1rem;
+    padding-bottom: 0.5rem;
     line-height: 1;
     margin-bottom: 0;
 }
 .m-filtert-links {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     padding-bottom: 2rem;
 }
 .m-filtert-links a:not(:first-child) {
@@ -11115,6 +11129,7 @@ a.o-profile:link {
     width: auto;
 }
 .o-header {
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11262,6 +11277,7 @@ a.a-link:hover {
     width: 250px;
     height: 40px;
     margin-bottom: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .a-login-button {
     border: 3px solid var(--color-white);
@@ -11407,6 +11423,7 @@ a.a-pending-home-button:hover {
 }
 .a-avd-home-title {
     color: var(--color-accent);
+    font-family: vag-bold;
     font-size: 16pt;
     font-weight: bold;
     border-bottom: 1px solid white;
@@ -11441,7 +11458,7 @@ a.a-pending-home-button:hover {
     src: url('/src/fonts/VAG-Rounded-Bold.ttf');
 }
 * {
-    font-family: vag;
+    font-family: vag, "sans-serif";
 }
 body {
     margin: 0;

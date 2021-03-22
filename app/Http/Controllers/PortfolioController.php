@@ -168,7 +168,7 @@ class PortfolioController extends Controller
         return view('pages.gmb-home', [
             // 'sub_courses' => $sub_courses,
             'students' => $students,
-            'sub_header' => 'Photo Design',
+            'sub_header' => 'Printmedia',
             ]);
     }
 
@@ -186,7 +186,7 @@ class PortfolioController extends Controller
         return view('pages.gmb-home', [
             // 'sub_courses' => $sub_courses,
             'students' => $students,
-            'sub_header' => 'Graphic Design',
+            'sub_header' => 'Crossmedia',
             ]);
     }
 }

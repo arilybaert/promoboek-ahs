@@ -14,7 +14,7 @@
                 @csrf
                 <div class="col-md-6">
                     <label for="file" class="form-label">Image</label>
-                    <input type="file" class="form-control" name="file" accept="image/*">
+                    <input type="file" class="form-control @error('file') is-invalid @enderror"  name="file" accept="image/*" required >
                 </div>
                 <div class="col-8"></div>
                 <div class="col-md-6">

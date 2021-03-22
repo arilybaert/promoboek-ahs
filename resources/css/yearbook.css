@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-evenly;
 }
+.a-yearbook-filter {
+    display: flex;
+    justify-content: space-evenly;
+}
 .o-yearbook-students {
     display: flex;
     flex-wrap: wrap;
@@ -18,12 +22,14 @@
 
 .o-studentcards {
     width: 95%;
-
     padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.o-studentcards:hover {
+    text-decoration: none;
 }
 .m-yearbook-image-container {
     position: relative;
@@ -39,6 +45,8 @@
 }
 .a-yearbook-student-name {
     text-align: center;
+    font-family: vag-bold;
+
 }
 .a-yearbook-student-major {
     display: flex;
@@ -49,13 +57,14 @@
     position: absolute;
     background-color: var(--color-cmo);
     color: var(--color-white);
-    border: 7px solid var(--color-white);
+    border: 5px solid var(--color-white);
     height: 9vh;
     width: 9vh;
     border-radius: 50%;
     font-weight: 800;
     bottom: 0;
     right: 0;
+
 }
 .a-yearbook-student-major-cmo {
     background-color: var(--color-cmo);
