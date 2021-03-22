@@ -37,8 +37,8 @@
                 <img src="{{ asset($video->thumbnail_image) }}" alt="thumbnail" class="a-avd-home-thumbnail">
                 <img src="{{asset('/src/img/logo/playButton.png')}}" alt="play" class="a-avd-home-play">
             </div>
-            <h2 class="a-avd-home-title">{{ $student->title }} </h2>
-            <p class="a-avd-home-content">{{$student->content}}</p>
+            <h2 class="a-avd-home-title">{{ $video->title }} </h2>
+            <p class="a-avd-home-content">{{$video->content}}</p>
 
         </div>
         <!-- The Modal -->
